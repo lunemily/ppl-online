@@ -1,3 +1,9 @@
-<h2>{{challenger.name | uppercase}} Details</h2>
-<div><span>id: </span>{{challenger.id}}</div>
-<div><span>name: </span>{{challenger.name}}</div>
+<h2>My Challengers</h2>
+<ul class="challengers">
+    <li *ngFor="let challenger of challengers"
+        (click)="onSelect(challenger)"
+        [class.selected]="challenger === selectedChallenger">
+        <span class="badge">{{challenger.id}}</span> {{challenger.name}}
+    </li>
+</ul>
+<app-challenger-detail [challenger]="selectedChallenger"></app-challenger-detail>

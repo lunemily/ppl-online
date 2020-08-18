@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Challenger } from '../challenger'
+import { Challenger } from '../challenger';
+import { ChallengerService } from '../challenger.service';
 
 @Component({
   selector: 'app-challengers',
@@ -12,9 +13,22 @@ export class ChallengersComponent implements OnInit {
     name: 'Windstorm'
   }
 
-  constructor() { }
+  challengers: Challenger[];
+
+  selectedChallenger: Challenger;
+  onSelect(challenger: Challenger): void {
+    this.selectedChallenger = challenger;
+  }
+
+  getChallengers(): void {
+    this.challengerService.getChallengers()
+      .subscribe( challengers => this.challengers = challengers);
+  }
+
+  constructor(private challengerService: ChallengerService) { }
 
   ngOnInit(): void {
+    this.getChallengers();
   }
 
 }
