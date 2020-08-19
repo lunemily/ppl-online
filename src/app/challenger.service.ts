@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Challenger } from './challenger';
 import { CHALLENGERS } from './mock-challengers';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,9 @@ import { CHALLENGERS } from './mock-challengers';
 export class ChallengerService {
   
   getChallengers(): Observable<Challenger[]> {
+    this.messageService.add('ChallengerService: fetched challengers');
     return of(CHALLENGERS);
   }
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 }
