@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
+import { MatButtonModule, } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +16,8 @@ import { ChallengerDetailComponent } from './challenger-detail/challenger-detail
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChallengerSearchComponent } from './challenger-search/challenger-search.component';
+import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,9 +26,12 @@ import { ChallengerSearchComponent } from './challenger-search/challenger-search
     ChallengerDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    ChallengerSearchComponent
+    ChallengerSearchComponent,
+    HeaderComponent,
   ],
   imports: [
+    MatButtonModule,
+    MatIconModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -33,7 +41,8 @@ import { ChallengerSearchComponent } from './challenger-search/challenger-search
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-)
+),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

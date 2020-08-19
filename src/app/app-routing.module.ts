@@ -5,9 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChallengerDetailComponent } from './challenger-detail/challenger-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/challengers', pathMatch: 'full' },
   { path: 'challengers', component: ChallengersComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  // { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: ChallengerDetailComponent },
 ];
 
