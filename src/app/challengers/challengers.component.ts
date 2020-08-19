@@ -8,22 +8,8 @@ import { ChallengerService } from '../challenger.service';
   styleUrls: ['./challengers.component.css']
 })
 export class ChallengersComponent implements OnInit {
-  challenger: Challenger = {
-    id: 1,
-    name: 'Windstorm'
-  }
 
   challengers: Challenger[];
-
-  selectedChallenger: Challenger;
-  onSelect(challenger: Challenger): void {
-    this.selectedChallenger = challenger;
-  }
-
-  getChallengers(): void {
-    this.challengerService.getChallengers()
-      .subscribe( challengers => this.challengers = challengers);
-  }
 
   constructor(private challengerService: ChallengerService) { }
 
@@ -31,4 +17,8 @@ export class ChallengersComponent implements OnInit {
     this.getChallengers();
   }
 
+  getChallengers(): void {
+    this.challengerService.getChallengers()
+      .subscribe( challengers => this.challengers = challengers);
+  }
 }

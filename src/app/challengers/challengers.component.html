@@ -1,9 +1,8 @@
 <h2>My Challengers</h2>
 <ul class="challengers">
-    <li *ngFor="let challenger of challengers"
-        (click)="onSelect(challenger)"
-        [class.selected]="challenger === selectedChallenger">
-        <span class="badge">{{challenger.id}}</span> {{challenger.name}}
+    <li *ngFor="let challenger of challengers">
+        <a routerLink="/detail/{{challenger.id}}">
+            <span class="badge">{{challenger.id}}</span> {{challenger.name}}
+        </a>
     </li>
 </ul>
-<app-challenger-detail [challenger]="selectedChallenger"></app-challenger-detail>
