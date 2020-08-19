@@ -1,1 +1,12 @@
-<h1>{{ title }}</h1>
+<p>
+    <mat-toolbar color="primary">
+        <span>{{ title }}</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button
+                (click)="openSnackBar()"
+                class="example-icon"
+                aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-toolbar>
+</p>

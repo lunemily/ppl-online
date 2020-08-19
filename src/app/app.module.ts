@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 import { MatButtonModule, } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,9 +35,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     MatButtonModule,
     MatIconModule,
+    MatToolbarModule,
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ClipboardModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

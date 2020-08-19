@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ChallengerService } from '../challenger.service';
+import { HeaderService } from '../header.service';
 
 @Component({
   selector: 'app-challenger-detail',
@@ -15,13 +16,15 @@ export class ChallengerDetailComponent implements OnInit {
   @Input() challenger: Challenger;
 
   constructor(
-  private route: ActivatedRoute,
-  private challengerService: ChallengerService,
-  private location: Location
+    private route: ActivatedRoute,
+    private challengerService: ChallengerService,
+    private headerService: HeaderService,
+    private location: Location,
   ) { }
 
   ngOnInit(): void {
     this.getChallenger();
+    this.headerService.setUrl(window.location.href);
   }
 
   getChallenger(): void {

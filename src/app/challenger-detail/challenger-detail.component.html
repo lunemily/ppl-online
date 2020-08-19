@@ -1,5 +1,5 @@
 <div *ngIf="challenger">
-    <h2>{{challenger.name | uppercase}} Details</h2>
+    <h2>{{challenger.name}}'s badge count</h2>
     <div><span>id: </span>{{challenger.id}}</div>
     <div>
     <label>name:
@@ -7,4 +7,5 @@
     </label>
     </div>
 </div>
-<button (click)="goBack()">go back</button>
+
+<a mat-raised-button color="primary" routerLink="/challengers">Challengers</a>
