@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-import {ClipboardModule} from '@angular/cdk/clipboard';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule, } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -33,8 +36,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
   ],
   imports: [
+    MatAutocompleteModule,
     MatButtonModule,
+    MatFormFieldModule,
     MatIconModule,
+    MatInputModule,
     MatToolbarModule,
     MatSnackBarModule,
     BrowserModule,

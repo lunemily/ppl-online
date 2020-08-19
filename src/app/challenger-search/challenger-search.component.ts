@@ -15,6 +15,7 @@ import { ChallengerService } from '../challenger.service';
   styleUrls: [ './challenger-search.component.css' ]
 })
 export class ChallengerSearchComponent implements OnInit {
+  searchValue = "";
   challengers$: Observable<Challenger[]>;
   private searchTerms = new Subject<string>();
 

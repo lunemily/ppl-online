@@ -1,13 +1,30 @@
 <div id="search-component">
-    <h4><label for="search-box">Challenger Search</label></h4>
-  
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-  
-    <ul class="search-result">
+    <mat-form-field>
+      <mat-label>Search</mat-label>
+      <input matInput
+          #searchBox
+          id="search-box"
+          (input)="search(searchBox.value)"
+          placeholder="Discord Name"
+          [(ngModel)]="searchValue"
+          [matAutocomplete]="auto" />
+      <button mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="searchValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let challenger of challengers$ | async"
+      [value]="challenger.name"
+      routerLink="/detail/{{challenger.id}}">
+        {{challenger.name}}
+      </mat-option>
+    </mat-autocomplete>
+
+    <!-- <ul class="search-result">
       <li *ngFor="let challenger of challengers$ | async" >
         <a routerLink="/detail/{{challenger.id}}">
           {{challenger.name}}
         </a>
       </li>
     </ul>
-  </div>
+  </div> -->
