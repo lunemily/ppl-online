@@ -8,16 +8,12 @@ import { Challenger } from './challenger';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const challengers = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 11, name: 'cometpenguin' },
+      { id: 12, name: 'rhonder' },
+      { id: 13, name: 'toastdeib' },
+      { id: 14, name: 'erkenhelm' },
+      { id: 15, name: 'chartwig' },
+      { id: 16, name: 'ruppy' },
     ];
     return {challengers};
   }
