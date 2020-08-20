@@ -8,12 +8,110 @@ import { Challenger } from './challenger';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const challengers = [
-      { id: 11, name: 'cometpenguin', badges: ["test_badge"], emblems: ["test_emblem"], champions: ["test_champion"] },
-      { id: 12, name: 'rhonder', badges: [], emblems: [], champions: [] },
-      { id: 13, name: 'toastdeib', badges: [], emblems: [], champions: [] },
-      { id: 14, name: 'erkenhelm', badges: [], emblems: [], champions: [] },
-      { id: 15, name: 'chartwig', badges: [], emblems: [], champions: [] },
-      { id: 16, name: 'ruppy', badges: [], emblems: [], champions: [] },
+      { id: 11,
+        name: 'cometpenguin',
+        badges: [
+          "badge1",
+          "badge2",
+          "badge3",
+          "badge4",
+          "badge5",
+          "badge6",
+          "badge7",
+          "badge8",
+        ],
+        emblems: [
+          "emblem1",
+          "emblem2",
+          "emblem3",
+          "emblem4",
+        ],
+        champions: [
+          "champion1",
+          "champion2",
+        ]
+      },
+      { id: 12,
+        name: 'rhonder',
+        badges: [
+          "badge1",
+          "badge13",
+          "badge3",
+          "badge14",
+          "badge5",
+          "badge6",
+          "badge2",
+          "badge8",
+        ],
+        emblems: [
+          "emblem1",
+          "emblem2",
+          "emblem5",
+          "emblem4",
+        ],
+        champions: [
+          "champion2",
+        ]
+      },
+      { id: 13,
+        name: 'toastdeib',
+        badges: [
+          "badge1",
+          "badge13",
+          "badge6",
+          "badge2",
+        ],
+        emblems: [
+        ],
+        champions: [
+        ]
+      },
+      { id: 14,
+        name: 'erkenhelm',
+        badges: [
+          "badge1",
+          "badge13",
+          "badge3",
+          "badge14",
+          "badge15",
+          "badge6",
+          "badge12",
+          "badge8",
+        ],
+        emblems: [
+          "emblem1",
+          "emblem2",
+          "emblem5",
+        ],
+        champions: [
+          "champion2",
+        ]
+      },
+      { id: 15,
+        name: 'chartwig',
+        badges: [
+          "badge4",
+          "badge17",
+        ],
+        emblems: [
+        ],
+        champions: [
+        ]
+      },
+      { id: 16,
+        name: 'ruppy',
+        badges: [
+          "badge4",
+          "badge12",
+          "badge9",
+          "badge17",
+          "badge11",
+        ],
+        emblems: [
+        ],
+        champions: [
+        ]
+      },
     ];
     return {challengers};
   }
