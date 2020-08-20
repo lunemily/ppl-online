@@ -30,7 +30,32 @@ export class ChallengerDetailComponent implements OnInit {
   getChallenger(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.challengerService.getChallenger(id)
-      .subscribe(challenger => this.challenger = challenger);
+      .subscribe(challenger => this.challenger = this.shuffle(challenger));
+  }
+
+  shuffle(challenger: Challenger): Challenger {
+    challenger.badges = this.shuffleArray(challenger.badges);
+    challenger.emblems = this.shuffleArray(challenger.emblems);
+    challenger.champions = this.shuffleArray(challenger.champions);
+    return challenger;
+  }
+
+  // -> Fisher–Yates shuffle algorithm
+  shuffleArray(array: string[]): string[] {
+    var m = array.length, t, i;
+  
+    // While there remain elements to shuffle
+    while (m) {
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+  
+    return array;
   }
 
   goBack(): void {

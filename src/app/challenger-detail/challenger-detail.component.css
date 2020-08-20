@@ -39,3 +39,88 @@ button:disabled {
 td {
   height: 80px;
 }
+
+/* Badge colors */
+.badge1 {
+  background-color: #7e6262;
+}
+.badge2 {
+  background-color: #b3ddb8;
+}
+.badge3 {
+  background-color: #21177e;
+}
+.badge4 {
+  background-color: #ad4880;
+}
+.badge5 {
+  background-color: #a0b95b;
+}
+.badge6 {
+  background-color: #6d6d6d;
+}
+.badge7 {
+  background-color: #3ba194;
+}
+.badge8 {
+  background-color: #069111;
+}
+.badge9 {
+  background-color: #c24f0d;
+}
+.badge10 {
+  background-color: #160650;
+}
+.badge11 {
+  background-color: #f1b3bb;
+}
+.badge12 {
+  background-color: #eee9a5;
+}
+.badge13 {
+  background-color: #c583da;
+}
+.badge14 {
+  background-color: #00ffdd;
+}
+.badge15 {
+  background-color: #10bb19;
+}
+.badge16 {
+  background-color: #c40808;
+}
+.badge17 {
+  background-color: #8b006d;
+}
+.badge18 {
+  background-color: #9eb80b;
+}
+
+
+/* Emblem colors */
+.emblem1 {
+  background-color: #069111;
+}
+.emblem2 {
+  background-color: #b3ddb8;
+}
+.emblem3 {
+  background-color: #8b006d;
+}
+.emblem4 {
+  background-color: #ad4880;
+}
+.emblem5 {
+  background-color: #f1b3bb;
+}
+.emblem6 {
+  background-color: #6d6d6d;
+}
+
+/* Champion colors */
+.champion1 {
+  background-color: #00ffdd;
+}
+.champion2 {
+  background-color: #9eb80b;
+}

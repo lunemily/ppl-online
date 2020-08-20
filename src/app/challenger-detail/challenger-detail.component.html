@@ -7,19 +7,19 @@
                 <td colspan="8"><span>BEAT 8 GYMS LEADERS TO GO ON TO THE ELITE 6</span></td>
             </tr>
             <tr id="badges">
-                <td *ngFor="let badge of challenger.badges | slice:0:8; let i=index"><span>{{ badge }}</span></td>
+                <td *ngFor="let badge of challenger.badges | slice:0:8; let i=index" class="{{ badge }}"><span>{{ badge }}</span></td>
             </tr>
             <tr>
                 <td colspan="8"><span>BEAT 4 ELITES TO GO ON TO THE CHAMPION</span></td>
             </tr>
             <tr id="emblems">
-                <td colspan="2" *ngFor="let emblem of challenger.emblems | slice:0:4; let i=index"><span>{{ emblem }}</span></td>
+                <td colspan="2" *ngFor="let emblem of challenger.emblems | slice:0:4; let i=index" class="{{ emblem }}"><span>{{ emblem }}</span></td>
             </tr>
             <tr>
                 <td colspan="8"><span>COLLET 8 GYM BADGES AND 4 EMBLEMS TO CHALLENGE A CHAMPION</span></td>
             </tr>
             <tr id="champions">
-                <td colspan="8" *ngFor="let champion of challenger.champions | slice:0:1; let i=index"><span>{{ champion }}</span></td>
+                <td colspan="8" *ngFor="let champion of challenger.champions | slice:0:1; let i=index" class="{{ champion }}"><span>{{ champion }}</span></td>
             </tr>
         </table>
     </mat-card>

@@ -19,12 +19,22 @@ export class InMemoryDataService implements InMemoryDbService {
           "badge6",
           "badge7",
           "badge8",
+          "badge9",
+          "badge10",
+          "badge11",
+          "badge12",
+          "badge13",
+          "badge14",
+          "badge15",
+          "badge16",
         ],
         emblems: [
           "emblem1",
           "emblem2",
           "emblem3",
           "emblem4",
+          "emblem5",
+          "emblem6",
         ],
         champions: [
           "champion1",
@@ -77,11 +87,14 @@ export class InMemoryDataService implements InMemoryDbService {
           "badge6",
           "badge12",
           "badge8",
+          "badge9",
         ],
         emblems: [
+          "emblem3",
           "emblem1",
           "emblem2",
           "emblem5",
+          "emblem6",
         ],
         champions: [
           "champion2",
@@ -106,6 +119,15 @@ export class InMemoryDataService implements InMemoryDbService {
           "badge9",
           "badge17",
           "badge11",
+        ],
+        emblems: [
+        ],
+        champions: [
+        ]
+      },
+      { id: 17,
+        name: 'unlucky',
+        badges: [
         ],
         emblems: [
         ],
