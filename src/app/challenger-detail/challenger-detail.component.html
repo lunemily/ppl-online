@@ -1,11 +1,24 @@
 <div *ngIf="challenger">
-    <h2>{{challenger.name}}'s badge count</h2>
-    <div><span>id: </span>{{challenger.id}}</div>
-    <div>
-    <label>name:
-        <input [(ngModel)]="challenger.name" placeholder="name"/>
-    </label>
-    </div>
-</div>
+    <h2>{{ challenger.name | uppercase }}</h2>
 
+    <h3>Badges Earned</h3>
+    <ul>
+        <li *ngFor="let badge of challenger.badges">
+            <span>{{badge}}</span>
+        </li>
+    </ul>
+    <h3>Emblems Earned</h3>
+    <ul>
+        <li *ngFor="let emblem of challenger.emblems">
+            <span>{{emblem}}</span>
+        </li>
+    </ul>
+    <h3>Champions Defeated</h3>
+    <ul>
+        <li *ngFor="let champion of challenger.champions">
+            <span>{{champion}}</span>
+        </li>
+    </ul>
+</div>
+<br>
 <a mat-raised-button color="primary" routerLink="/challengers">Challengers</a>
