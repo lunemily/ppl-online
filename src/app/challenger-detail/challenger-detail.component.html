@@ -1,25 +1,32 @@
 <div *ngIf="challenger">
-    <h2>{{ challenger.name | uppercase }}'S TRAINER CARD</h2>
 
     <mat-card class="trainer-card">
-        <table>
+        <h2>{{ challenger.name | uppercase }}'S TRAINER CARD</h2>
+        <table class="badges" cellspacing="0">
             <tr>
-                <td colspan="8"><span>BEAT 8 GYMS LEADERS TO GO ON TO THE ELITE 6</span></td>
+                <th colspan="8"><span>Beat 8 gym leaders to go on to the elite 6</span></th>
             </tr>
-            <tr id="badges">
-                <td *ngFor="let badge of challenger.badges | slice:0:8; let i=index" class="{{ badge }}"><span>{{ badge }}</span></td>
+            <tr class="casual">
+                <td *ngFor="let badge of challenger.badges | slice:0:8; let i=index" class="badge {{ badge }}"><span></span></td>
             </tr>
+            <tr class="veteran">
+                <td *ngFor="let badge of challenger.badges | slice:9:16; let i=index" class="badge {{ badge }}"><span></span></td>
+            </tr>
+        </table>
+        <table class="emblems" cellspacing="0">
             <tr>
-                <td colspan="8"><span>BEAT 4 ELITES TO GO ON TO THE CHAMPION</span></td>
+                <th colspan="6"><span>Beat 4 elites to go on to the champion</span></th>
             </tr>
             <tr id="emblems">
-                <td colspan="2" *ngFor="let emblem of challenger.emblems | slice:0:4; let i=index" class="{{ emblem }}"><span>{{ emblem }}</span></td>
+                <td *ngFor="let emblem of challenger.emblems | slice:0:6; let i=index" class="emblem {{ emblem }}"><span></span></td>
             </tr>
+        </table>
+        <table class="champions" cellspacing="0">
             <tr>
-                <td colspan="8"><span>COLLET 8 GYM BADGES AND 4 EMBLEMS TO CHALLENGE A CHAMPION</span></td>
+                <th colspan="2"><span>Collect 8 gym badges and 4 emblems to face a champion</span></th>
             </tr>
             <tr id="champions">
-                <td colspan="8" *ngFor="let champion of challenger.champions | slice:0:1; let i=index" class="{{ champion }}"><span>{{ champion }}</span></td>
+                <td *ngFor="let champion of challenger.champions | slice:0:2; let i=index" class="champion {{ champion }}"><span></span></td>
             </tr>
         </table>
     </mat-card>

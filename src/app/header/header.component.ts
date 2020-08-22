@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void { }
 
   openChallenging() {
-    window.open("assets/challenging.png");
+    window.open("assets/images/challenging.png");
   }
 
   openCopy() {
@@ -35,6 +35,6 @@ export class HeaderComponent implements OnInit {
   }
 
   openRules() {
-    window.open("assets/rules.png");
+    window.open("assets/images/rules.png");
   }
 }

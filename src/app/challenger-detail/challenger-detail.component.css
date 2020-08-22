@@ -29,14 +29,97 @@ button:disabled {
   cursor: auto;
 }
 .trainer-card table {
-  margin: 0px;
+  width: 90%;
+  margin: 0px auto;
   max-width: 100vw;
+  color: white;
+  padding: 0.5em;
 }
 td {
   height: 80px;
+  border: 4px solid #ffffff;
+}
+th span {
+  font-family: blox;
+  font-weight: 100;
+  font-size: 2em;
+  color: #ffffff;
 }
 #challengers {
   margin-bottom: 2em;
+}
+
+.badges {
+  background-color: #ea77e8;
+}
+
+.emblems {
+  background-color: #71ff77;
+}
+
+.champions {
+  background-color: #33eb47;
+}
+
+.badges th span {
+  text-shadow:  0px 1px #2f808a,
+                1px 1px #2f808a,
+                1px 0px #2f808a,
+               1px -1px #2f808a,
+               0px -1px #2f808a,
+              -1px -1px #2f808a,
+               -1px 0px #2f808a,
+               -1px 1px #2f808a,
+                0px 2px #2f808a,
+                2px 2px #2f808a,
+                2px 0px #2f808a,
+               2px -2px #2f808a,
+               0px -2px #2f808a,
+              -2px -2px #2f808a,
+               -2px 0px #2f808a,
+               -2px 2px #2f808a;
+}
+
+.emblems th span {
+  text-shadow:  0px 1px #af0996,
+                1px 1px #af0996,
+                1px 0px #af0996,
+               1px -1px #af0996,
+               0px -1px #af0996,
+              -1px -1px #af0996,
+               -1px 0px #af0996,
+               -1px 1px #af0996,
+                0px 2px #af0996,
+                2px 2px #af0996,
+                2px 0px #af0996,
+               2px -2px #af0996,
+               0px -2px #af0996,
+              -2px -2px #af0996,
+               -2px 0px #af0996,
+               -2px 2px #af0996;
+}
+
+.champions th span {
+  text-shadow:  0px 1px #33eb46,
+                1px 1px #33eb46,
+                1px 0px #33eb46,
+               1px -1px #33eb46,
+               0px -1px #33eb46,
+              -1px -1px #33eb46,
+               -1px 0px #33eb46,
+               -1px 1px #33eb46,
+                0px 2px #33eb46,
+                2px 2px #33eb46,
+                2px 0px #33eb46,
+               2px -2px #33eb46,
+               0px -2px #33eb46,
+              -2px -2px #33eb46,
+               -2px 0px #33eb46,
+               -2px 2px #33eb46;
+}
+
+.badge {
+  max-width: 9%;
 }
 
 /* Badge colors */
