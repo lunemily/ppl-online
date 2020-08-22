@@ -3,9 +3,18 @@
         <span>{{ title }}</span>
         <span class="example-spacer"></span>
         <button mat-icon-button
-                (click)="openSnackBar()"
-                class="example-icon"
-                aria-label="Example icon-button with share icon">
+                (click)="openChallenging()"
+                aria-label="How to Challenge">
+            <mat-icon>videogame_asset</mat-icon>
+        </button>
+        <button mat-icon-button
+                (click)="openRules()"
+                aria-label="PPL Rules">
+            <mat-icon>description</mat-icon>
+        </button>
+        <button mat-icon-button
+                (click)="openCopy()"
+                aria-label="Copy this URL">
             <mat-icon>share</mat-icon>
         </button>
     </mat-toolbar>

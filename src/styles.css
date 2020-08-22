@@ -21,8 +21,23 @@ body, input[type="text"], button {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 html, body {
   height: 100%;
   text-align: center;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url('assets/PAXOnlineLogo.png');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+mat-card {
+  width: fit-content;
+  max-width: 800px;
+  margin: 1em auto;
+}

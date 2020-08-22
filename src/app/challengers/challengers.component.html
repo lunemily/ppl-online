@@ -1,8 +1,12 @@
-<app-challenger-search></app-challenger-search>
-<ul class="challengers">
-    <li *ngFor="let challenger of challengers">
-        <a routerLink="/detail/{{challenger.id}}">
-            <span class="badge">{{challenger.id}}</span> {{challenger.name}}
-        </a>
-    </li>
-</ul>
+<mat-card>
+    <app-challenger-search></app-challenger-search>
+</mat-card>
+<mat-card class="trainer-card">
+    <ul class="challengers">
+        <li *ngFor="let challenger of challengers">
+            <a routerLink="/detail/{{challenger.id}}">
+                <span class="badge">{{challenger.id}}</span> {{challenger.name}}
+            </a>
+        </li>
+    </ul>
+</mat-card>

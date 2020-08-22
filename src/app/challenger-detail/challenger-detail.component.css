@@ -28,16 +28,15 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
-.trainer-card {
-  width: fit-content;
-  max-width: 800px;
-  margin: 1em auto;
-}
 .trainer-card table {
   margin: 0px;
+  max-width: 100vw;
 }
 td {
   height: 80px;
+}
+#challengers {
+  margin-bottom: 2em;
 }
 
 /* Badge colors */

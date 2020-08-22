@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Clipboard } from '@angular/cdk/clipboard';
 
@@ -17,16 +17,24 @@ export class HeaderComponent implements OnInit {
   constructor(
     private router : Router,
     public headerService: HeaderService,
-    private _snackBar: MatSnackBar,
+    private snackBar: MatSnackBar,
     private clipboard: Clipboard,
   ) { }
 
   ngOnInit(): void { }
 
-  openSnackBar() {
+  openChallenging() {
+    window.open("assets/challenging.png");
+  }
+
+  openCopy() {
     this.clipboard.copy(this.headerService.url);
-    this._snackBar.open("URL copied to clipboard!", "Dismiss", {
+    this.snackBar.open("URL copied to clipboard!", "Dismiss", {
       duration: 2000,
     });
+  }
+
+  openRules() {
+    window.open("assets/rules.png");
   }
 }
