@@ -10,7 +10,7 @@
                 </th>
             </tr>
             <tr class="casual">
-                <td *ngFor="let badge of challenger.badges | slice:0:8; let i=index" class="badge {{ badge }}"><span></span></td>
+                <td *ngFor="let badge of ['1','2','3','4','5','6','7','8']" [ngClass]="{'unearned': challenger.badges.indexOf(badge) == -1}" class="badge {{ badge }}"><span></span></td>
             </tr>
         </table>
         <table class="veteran-badges" cellspacing="0">
@@ -20,7 +20,7 @@
                 </th>
             </tr>
             <tr class="veteran">
-                <td *ngFor="let badge of challenger.badges | slice:9:16; let i=index" class="badge {{ badge }}"><span></span></td>
+                <td *ngFor="let badge of ['9','10','11','12','13','14','15','16']" [ngClass]="{'unearned': challenger.badges.indexOf(badge) == -1}" class="badge {{ badge }}"><span></span></td>
             </tr>
         </table>
         <table class="emblems" cellspacing="0">
@@ -31,7 +31,7 @@
                 </th>
             </tr>
             <tr id="emblems">
-                <td *ngFor="let emblem of challenger.emblems | slice:0:6; let i=index" class="emblem {{ emblem }}"><span></span></td>
+                <td *ngFor="let emblem of ['1','2','3','4','5','6']" [ngClass]="{'unearned': challenger.emblems.indexOf(emblem) == -1}" class="emblem {{ emblem }}"><span></span></td>
             </tr>
         </table>
         <table class="champions" cellspacing="0">
@@ -42,7 +42,7 @@
                 </th>
             </tr>
             <tr id="champions">
-                <td *ngFor="let champion of challenger.champions | slice:0:2; let i=index" class="champion {{ champion }}"><span></span></td>
+                <td *ngFor="let champion of ['1','2']" [ngClass]="{'unearned': challenger.champions.indexOf(champion) == -1}" class="champion {{ champion }}"><span></span></td>
             </tr>
         </table>
     </mat-card>
