@@ -4,23 +4,31 @@
         <h2>{{ challenger.name | uppercase }}'S TRAINER CARD</h2>
         <table class="casual-badges" cellspacing="0">
             <tr>
-                <th colspan="8">
+                <th colspan="9">
                     <span class="codehack left">Casual Gym Leaders</span>
                     <span class="blox right">Beat any 8 gym leaders to go on to the elite 6</span>
                 </th>
             </tr>
             <tr class="casual">
-                <td *ngFor="let badge of ['1','2','3','4','5','6','7','8']" [ngClass]="{'unearned': challenger.badges.indexOf(badge) == -1}" class="badge {{ badge }}"><span></span></td>
+                <td *ngFor="let badge of this.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge) === -1}" class="badge {{ badge }}">
+                    <div>
+                        <img src="assets/images/badges/{{ badge }}.png" />
+                    </div>
+                </td>
             </tr>
         </table>
         <table class="veteran-badges" cellspacing="0">
             <tr>
-                <th colspan="8">
+                <th colspan="10">
                     <span class="codehack left">Veteran Gym Leaders</span>
                 </th>
             </tr>
             <tr class="veteran">
-                <td *ngFor="let badge of ['9','10','11','12','13','14','15','16']" [ngClass]="{'unearned': challenger.badges.indexOf(badge) == -1}" class="badge {{ badge }}"><span></span></td>
+                <td *ngFor="let badge of this.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge) === -1}" class="badge {{ badge }}">
+                    <div>
+                        <img src="assets/images/badges/{{ badge }}.png" />
+                    </div>
+                </td>
             </tr>
         </table>
         <table class="emblems" cellspacing="0">
@@ -31,7 +39,11 @@
                 </th>
             </tr>
             <tr id="emblems">
-                <td *ngFor="let emblem of ['1','2','3','4','5','6']" [ngClass]="{'unearned': challenger.emblems.indexOf(emblem) == -1}" class="emblem {{ emblem }}"><span></span></td>
+                <td *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.emblems.indexOf(emblem) === -1}" class="emblem {{ emblem }}">
+                    <div>
+                        <img src="assets/images/badges/{{ emblem }}.png" />
+                    </div>
+                </td>
             </tr>
         </table>
         <table class="champions" cellspacing="0">
@@ -42,7 +54,9 @@
                 </th>
             </tr>
             <tr id="champions">
-                <td *ngFor="let champion of ['1','2']" [ngClass]="{'unearned': challenger.champions.indexOf(champion) == -1}" class="champion {{ champion }}"><span></span></td>
+                <td *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.champions.indexOf(champion) === -1}" class="champion {{ champion }}">
+                    <img src="assets/images/badges/{{ champion }}.png" />
+                </td>
             </tr>
         </table>
     </mat-card>

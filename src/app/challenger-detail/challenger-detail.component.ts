@@ -15,6 +15,45 @@ export class ChallengerDetailComponent implements OnInit {
 
   @Input() challenger: Challenger;
 
+  casualLeaders: String[] = [
+    "Aurethious",
+    "Simple Kenny",
+    "Mr Pizza",
+    "Emmett",
+    "Yoshua",
+    "Tom Roe",
+    "Lyra",
+    "Muckfoot",
+    "Red",
+  ];
+
+  veteranLeaders: String[] = [
+    "Rosy",
+    "Yakumo",
+    "Lionheart",
+    "Sakurai",
+    "Brick Tamland",
+    "Virgil",
+    "Barnum",
+    "TohruChu",
+    "Patrick Pinkerton",
+    "Capt Rusty",
+  ];
+
+  elites: String[] = [
+    "Rhonder",
+    "Kellan",
+    "Rune",
+    "Aiden",
+    "Cryo",
+    "Akira",
+  ];
+
+  champions: String[] = [
+    "Eleanora",
+    "scoot",
+  ]
+
   constructor(
     private route: ActivatedRoute,
     private challengerService: ChallengerService,
