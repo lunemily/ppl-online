@@ -2,7 +2,7 @@
 /* Application-wide Styles */
 @font-face {
   font-family: codehack;
-  src: url("assets/fonts/nightmare-codehack.otf") format("opentype");
+  src: url("assets/fonts/nightmare-codehack.ttf") format("truetype");
 }
 @font-face {
   font-family: blox;

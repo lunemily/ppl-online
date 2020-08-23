@@ -1,4 +1,3 @@
-/* HeroDetailComponent's private CSS styles */
 label {
     display: inline-block;
     width: 3em;
@@ -6,11 +5,13 @@ label {
     color: #607D8B;
     font-weight: bold;
 }
+
 input {
   height: 2em;
   font-size: 1em;
   padding-left: .4em;
 }
+
 button {
   margin-top: 20px;
   font-family: Arial;
@@ -20,37 +21,72 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
 button:hover {
   background-color: #cfd8dc;
 }
+
 button:disabled {
   background-color: #eee;
   color: #ccc;
   cursor: auto;
 }
+
+h2 {
+  font-family: codehack;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.trainer-card {
+  min-width: 50%;
+}
+
 .trainer-card table {
   width: 90%;
   margin: 0px auto;
   max-width: 100vw;
   color: white;
   padding: 0.5em;
+  text-align: left;
+  flex-direction: row;
 }
+
 td {
   height: 80px;
   border: 4px solid #ffffff;
 }
-th span {
-  font-family: blox;
+
+.codehack {
+  font-family: codehack;
   font-weight: 100;
   font-size: 2em;
   color: #ffffff;
 }
-#challengers {
-  margin-bottom: 2em;
+
+.blox {
+  font-family: blox;
+  font-weight: 100;
+  font-size: 1.5em;
+  color: #ffffff;
 }
 
-.badges {
-  background-color: #ea77e8;
+.casual-badges {
+  background-color: #ef92ff;
+}
+
+.veteran-badges {
+  background-color: #e552f1;
 }
 
 .emblems {
@@ -61,7 +97,45 @@ th span {
   background-color: #33eb47;
 }
 
-.badges th span {
+.casual-badges th span.codehack {
+  text-shadow:  0px 1px #8efe94,
+                1px 1px #8efe94,
+                1px 0px #8efe94,
+               1px -1px #8efe94,
+               0px -1px #8efe94,
+              -1px -1px #8efe94,
+               -1px 0px #8efe94,
+               -1px 1px #8efe94,
+                0px 2px #8efe94,
+                2px 2px #8efe94,
+                2px 0px #8efe94,
+               2px -2px #8efe94,
+               0px -2px #8efe94,
+              -2px -2px #8efe94,
+               -2px 0px #8efe94,
+               -2px 2px #8efe94;
+}
+
+.veteran-badges th span.codehack {
+  text-shadow:  0px 1px #4992c6,
+                1px 1px #4992c6,
+                1px 0px #4992c6,
+               1px -1px #4992c6,
+               0px -1px #4992c6,
+              -1px -1px #4992c6,
+               -1px 0px #4992c6,
+               -1px 1px #4992c6,
+                0px 2px #4992c6,
+                2px 2px #4992c6,
+                2px 0px #4992c6,
+               2px -2px #4992c6,
+               0px -2px #4992c6,
+              -2px -2px #4992c6,
+               -2px 0px #4992c6,
+               -2px 2px #4992c6;
+}
+
+.casual-badges th span.blox {
   text-shadow:  0px 1px #2f808a,
                 1px 1px #2f808a,
                 1px 0px #2f808a,
@@ -80,7 +154,26 @@ th span {
                -2px 2px #2f808a;
 }
 
-.emblems th span {
+.emblems th span.codehack {
+  text-shadow:  0px 1px #206626,
+                1px 1px #206626,
+                1px 0px #206626,
+               1px -1px #206626,
+               0px -1px #206626,
+              -1px -1px #206626,
+               -1px 0px #206626,
+               -1px 1px #206626,
+                0px 2px #206626,
+                2px 2px #206626,
+                2px 0px #206626,
+               2px -2px #206626,
+               0px -2px #206626,
+              -2px -2px #206626,
+               -2px 0px #206626,
+               -2px 2px #206626;
+}
+
+.emblems th span.blox {
   text-shadow:  0px 1px #af0996,
                 1px 1px #af0996,
                 1px 0px #af0996,
@@ -99,7 +192,26 @@ th span {
                -2px 2px #af0996;
 }
 
-.champions th span {
+.champions th span.codehack {
+  text-shadow:  0px 1px #023857,
+                1px 1px #023857,
+                1px 0px #023857,
+               1px -1px #023857,
+               0px -1px #023857,
+              -1px -1px #023857,
+               -1px 0px #023857,
+               -1px 1px #023857,
+                0px 2px #023857,
+                2px 2px #023857,
+                2px 0px #023857,
+               2px -2px #023857,
+               0px -2px #023857,
+              -2px -2px #023857,
+               -2px 0px #023857,
+               -2px 2px #023857;
+}
+
+.champions th span.blox {
   text-shadow:  0px 1px #33eb46,
                 1px 1px #33eb46,
                 1px 0px #33eb46,
@@ -122,87 +234,6 @@ th span {
   max-width: 9%;
 }
 
-/* Badge colors */
-.badge1 {
-  background-color: #7e6262;
-}
-.badge2 {
-  background-color: #b3ddb8;
-}
-.badge3 {
-  background-color: #21177e;
-}
-.badge4 {
-  background-color: #ad4880;
-}
-.badge5 {
-  background-color: #a0b95b;
-}
-.badge6 {
-  background-color: #6d6d6d;
-}
-.badge7 {
-  background-color: #3ba194;
-}
-.badge8 {
-  background-color: #069111;
-}
-.badge9 {
-  background-color: #c24f0d;
-}
-.badge10 {
-  background-color: #160650;
-}
-.badge11 {
-  background-color: #f1b3bb;
-}
-.badge12 {
-  background-color: #eee9a5;
-}
-.badge13 {
-  background-color: #c583da;
-}
-.badge14 {
-  background-color: #00ffdd;
-}
-.badge15 {
-  background-color: #10bb19;
-}
-.badge16 {
-  background-color: #c40808;
-}
-.badge17 {
-  background-color: #8b006d;
-}
-.badge18 {
-  background-color: #9eb80b;
-}
-
-
-/* Emblem colors */
-.emblem1 {
-  background-color: #069111;
-}
-.emblem2 {
-  background-color: #b3ddb8;
-}
-.emblem3 {
-  background-color: #8b006d;
-}
-.emblem4 {
-  background-color: #ad4880;
-}
-.emblem5 {
-  background-color: #f1b3bb;
-}
-.emblem6 {
-  background-color: #6d6d6d;
-}
-
-/* Champion colors */
-.champion1 {
-  background-color: #00ffdd;
-}
-.champion2 {
-  background-color: #9eb80b;
+#challengers {
+  margin-bottom: 2em;
 }

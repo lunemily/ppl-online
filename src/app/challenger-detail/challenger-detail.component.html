@@ -2,12 +2,22 @@
 
     <mat-card class="trainer-card">
         <h2>{{ challenger.name | uppercase }}'S TRAINER CARD</h2>
-        <table class="badges" cellspacing="0">
+        <table class="casual-badges" cellspacing="0">
             <tr>
-                <th colspan="8"><span>Beat 8 gym leaders to go on to the elite 6</span></th>
+                <th colspan="8">
+                    <span class="codehack left">Casual Gym Leaders</span>
+                    <span class="blox right">Beat any 8 gym leaders to go on to the elite 6</span>
+                </th>
             </tr>
             <tr class="casual">
                 <td *ngFor="let badge of challenger.badges | slice:0:8; let i=index" class="badge {{ badge }}"><span></span></td>
+            </tr>
+        </table>
+        <table class="veteran-badges" cellspacing="0">
+            <tr>
+                <th colspan="8">
+                    <span class="codehack left">Veteran Gym Leaders</span>
+                </th>
             </tr>
             <tr class="veteran">
                 <td *ngFor="let badge of challenger.badges | slice:9:16; let i=index" class="badge {{ badge }}"><span></span></td>
@@ -15,7 +25,10 @@
         </table>
         <table class="emblems" cellspacing="0">
             <tr>
-                <th colspan="6"><span>Beat 4 elites to go on to the champion</span></th>
+                <th colspan="6">
+                    <span class="codehack left">Elite 6</span>
+                    <span class="blox right">Beat any 4 elites to go on to the champion</span>
+                </th>
             </tr>
             <tr id="emblems">
                 <td *ngFor="let emblem of challenger.emblems | slice:0:6; let i=index" class="emblem {{ emblem }}"><span></span></td>
@@ -23,7 +36,10 @@
         </table>
         <table class="champions" cellspacing="0">
             <tr>
-                <th colspan="2"><span>Collect 8 gym badges and 4 emblems to face a champion</span></th>
+                <th colspan="2">
+                    <span class="codehack left">Chamipons</span>
+                    <span class="blox right">Collect 8 gym badges and 4 emblems to face the champion</span>
+                </th>
             </tr>
             <tr id="champions">
                 <td *ngFor="let champion of challenger.champions | slice:0:2; let i=index" class="champion {{ champion }}"><span></span></td>
