@@ -24,7 +24,7 @@ export class InMemoryDataService implements InMemoryDbService {
         emblems: [
           "Kellan",
           "Rune",
-          "Aiden",
+          "Aidan",
           "Cryo",
         ],
         champions: [
@@ -47,7 +47,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         emblems: [
           "Rune",
-          "Aiden",
+          "Aidan",
           "Cryo",
           "Akira",
         ],
@@ -84,7 +84,7 @@ export class InMemoryDataService implements InMemoryDbService {
           "Rhonder",
           "Kellan",
           "Rune",
-          "Aiden",
+          "Aidan",
           "Cryo",
           "Akira",
         ],

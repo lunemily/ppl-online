@@ -1,40 +1,22 @@
-label {
-    display: inline-block;
-    width: 3em;
-    margin: .5em 0;
-    color: #607D8B;
-    font-weight: bold;
+.codehack {
+  font-family: codehack;
+  font-weight: 100;
+  font-size: 2em;
+  color: #ffffff;
 }
 
-input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
-}
-
-button {
-  margin-top: 20px;
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #cfd8dc;
-}
-
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
+.blox {
+  font-family: blox;
+  font-weight: 100;
+  font-size: 1.5em;
+  color: #ffffff;
 }
 
 h2 {
   font-family: codehack;
   font-size: 2em;
+  padding: 1em;
+  margin: 0;
 }
 
 .left {
@@ -50,36 +32,44 @@ h2 {
 }
 
 .trainer-card {
-  min-width: 50%;
+  max-width: 100%;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
 }
 
-.trainer-card table {
-  width: 90%;
-  margin: 0px auto;
-  max-width: 100vw;
-  color: white;
+.header {
   padding: 0.5em;
-  text-align: left;
-  flex-direction: row;
 }
 
-td {
-  height: 80px;
-  border: 4px solid #ffffff;
+.portraits {
+  display: block;
+  padding: 0.5em;
+  clear: both;
 }
 
-.codehack {
-  font-family: codehack;
-  font-weight: 100;
-  font-size: 2em;
-  color: #ffffff;
+.portrait-container {
+  width: 9.5%;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  text-align: center; /* ensures the image is always in the h-middle */
+  overflow: hidden;
 }
 
-.blox {
-  font-family: blox;
-  font-weight: 100;
-  font-size: 1.5em;
-  color: #ffffff;
+.portrait-container.veteran {
+  width: 8.5%
+}
+
+.portrait-container.emblem, .portrait-container.champion {
+  width: 15%
+}
+
+img.portrait {
+  width: 100px;
+  height: 100px;
+  position: relative; /* allows repositioning */
+  left: 100%; /* move the whole width of the image to the right */
+  margin-left: -200%; /* magic! */
 }
 
 .casual-badges {
@@ -98,7 +88,23 @@ td {
   background-color: #33eb47;
 }
 
-.casual-badges th span.codehack {
+.casual {
+  background-color: #51b5a2;
+}
+
+.veteran {
+  background-color: #45cd89;
+}
+
+.emblem {
+  background-color: #238355;
+}
+
+.champion {
+  background-color: #003f50;
+}
+
+.casual-badges * span.codehack {
   text-shadow:  0px 1px #8efe94,
                 1px 1px #8efe94,
                 1px 0px #8efe94,
@@ -117,19 +123,7 @@ td {
                -2px 2px #8efe94;
 }
 
-.casual-badges td {
-  background-color: #51b5a2;
-}
-
-.veteran-badges td {
-  background-color: #45cd89;
-}
-
-.emblems td {
-  background-color: #238355;
-}
-
-.veteran-badges th span.codehack {
+.veteran-badges * span.codehack {
   text-shadow:  0px 1px #4992c6,
                 1px 1px #4992c6,
                 1px 0px #4992c6,
@@ -148,7 +142,7 @@ td {
                -2px 2px #4992c6;
 }
 
-.casual-badges th span.blox {
+.casual-badges * span.blox {
   text-shadow:  0px 1px #2f808a,
                 1px 1px #2f808a,
                 1px 0px #2f808a,
@@ -167,7 +161,7 @@ td {
                -2px 2px #2f808a;
 }
 
-.emblems th span.codehack {
+.emblems * span.codehack {
   text-shadow:  0px 1px #206626,
                 1px 1px #206626,
                 1px 0px #206626,
@@ -186,7 +180,7 @@ td {
                -2px 2px #206626;
 }
 
-.emblems th span.blox {
+.emblems * span.blox {
   text-shadow:  0px 1px #af0996,
                 1px 1px #af0996,
                 1px 0px #af0996,
@@ -205,7 +199,7 @@ td {
                -2px 2px #af0996;
 }
 
-.champions th span.codehack {
+.champions * span.codehack {
   text-shadow:  0px 1px #023857,
                 1px 1px #023857,
                 1px 0px #023857,
@@ -224,7 +218,7 @@ td {
                -2px 2px #023857;
 }
 
-.champions th span.blox {
+.champions * span.blox {
   text-shadow:  0px 1px #33eb46,
                 1px 1px #33eb46,
                 1px 0px #33eb46,
@@ -243,10 +237,15 @@ td {
                -2px 2px #33eb46;
 }
 
-td div img {
+.side-crop {
+  width: 24px;
+  height: 48px;
+}
+
+img.badge,img.emblem, img.champion {
   height: 50px;
   display: block;
-  margin: 0 auto -50px;
+  margin: -25px auto 0px;
   border: 4px solid #ffffff;
   border-radius: 29px;
   /* margin-bottom: -25px; */
@@ -260,10 +259,14 @@ td div img {
   opacity: 0.5;
 }
 
-.badge {
-  max-width: 9%;
-}
-
 #challengers {
   margin-bottom: 2em;
+}
+
+@media (min-width: 990px) {
+  .trainer-card {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 0 1em 1em 1em;
+  }
 }

@@ -44,7 +44,7 @@ export class ChallengerDetailComponent implements OnInit {
     "Rhonder",
     "Kellan",
     "Rune",
-    "Aiden",
+    "Aidan",
     "Cryo",
     "Akira",
   ];
