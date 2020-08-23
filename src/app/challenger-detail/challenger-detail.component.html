@@ -8,8 +8,9 @@
                 <span class="blox right">Beat any 8 gym leaders to go on to the elite 6</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let badge of this.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge) === -1}" class="casual portrait-container">
-                    <img class="portrait" src="assets/images/portraits/{{ badge }}.png" />
+                <div *ngFor="let badge of this.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge) === -1}" class="casual casual-size portrait-container">
+                    <img class="portrait" alt="{{ badge }}" title="{{ badge }}" src="assets/images/portraits/{{ badge }}.png" />
+                    <img class="badge" src="assets/images/badges/{{ badge }}.png" />
                 </div>
             </div>
         </div>
@@ -18,8 +19,9 @@
                 <span class="codehack left">Veteran Gym Leaders</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let badge of this.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge) === -1}" class="veteran portrait-container">
-                    <img class="portrait" src="assets/images/portraits/{{ badge }}.png" />
+                <div *ngFor="let badge of this.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge) === -1}" class="veteran veteran-size portrait-container">
+                    <img class="portrait" alt="{{ badge }}" title="{{ badge }}" src="assets/images/portraits/{{ badge }}.png" />
+                    <img class="emblem" src="assets/images/badges/{{ badge }}.png" />
                 </div>
             </div>
         </div>
@@ -29,8 +31,9 @@
                 <span class="blox right">Beat any 4 elites to go on to the champion</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.emblems.indexOf(emblem) === -1}" class="emblem portrait-container">
-                    <img class="portrait" src="assets/images/portraits/{{ emblem }}.png" />
+                <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.emblems.indexOf(emblem) === -1}" class="emblem emblem-size portrait-container">
+                    <img class="portrait" alt="{{ emblem }}" title="{{ emblem }}" src="assets/images/portraits/{{ emblem }}.png" />
+                    <img class="badge" src="assets/images/badges/{{ emblem }}.png" />
                 </div>
             </div>
         </div>
@@ -40,8 +43,8 @@
                 <span class="blox right">Collect 8 gym badges and 4 emblems to face the champion</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.champions.indexOf(champion) === -1}" class="champion portrait-container">
-                    <img class="portrait" src="assets/images/portraits/{{ champion }}.png" />
+                <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.champions.indexOf(champion) === -1}" class="champion champion-size portrait-container">
+                    <img class="portrait" alt="{{ champion }}" title="{{ champion }}" src="assets/images/portraits/{{ champion }}.png" />
                 </div>
             </div>
         </div>
