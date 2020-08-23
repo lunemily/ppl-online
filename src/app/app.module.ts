@@ -9,6 +9,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -25,6 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChallengerSearchComponent } from './challenger-search/challenger-search.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     ChallengerSearchComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     MatAutocompleteModule,
@@ -43,6 +47,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
+    MatListModule,
+    MatSidenavModule,
     MatSnackBarModule,
     MatToolbarModule,
     BrowserModule,

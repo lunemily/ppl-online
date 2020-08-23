@@ -2,11 +2,9 @@
     <app-challenger-search></app-challenger-search>
 </mat-card>
 <mat-card class="trainer-card">
-    <ul class="challengers">
-        <li *ngFor="let challenger of challengers">
-            <a routerLink="/detail/{{challenger.id}}">
-                <span class="badge">{{challenger.id}}</span> {{challenger.name}}
-            </a>
-        </li>
-    </ul>
+    <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let challenger of challengers" routerLink="/detail/{{challenger.id}}">
+            {{ challenger.name | uppercase }}
+        </mat-list-option>
+    </mat-selection-list>
 </mat-card>
