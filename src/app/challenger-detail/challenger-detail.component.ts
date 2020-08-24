@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Challenger } from '../challenger';
+import { Badge } from '../badge';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -69,15 +70,9 @@ export class ChallengerDetailComponent implements OnInit {
   getChallenger(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.challengerService.getChallenger(id)
-      .subscribe(challenger => this.challenger = this.shuffle(challenger));
+      .subscribe(challenger => this.challenger = challenger);
   }
 
-  shuffle(challenger: Challenger): Challenger {
-    challenger.badges = this.shuffleArray(challenger.badges);
-    challenger.emblems = this.shuffleArray(challenger.emblems);
-    challenger.champions = this.shuffleArray(challenger.champions);
-    return challenger;
-  }
 
   // -> Fisher–Yates shuffle algorithm
   shuffleArray(array: string[]): string[] {

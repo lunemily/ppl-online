@@ -11,23 +11,35 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class ChallengerService {
 
-  private challengersUrl = 'api/challengers';  // URL to web api
+  private challengersUrl = 'http://toastserv.com:26437';  // URL to web api
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  
+
   /** GET challengers from the server */
   getChallengers(): Observable<Challenger[]> {
-    return this.http.get<Challenger[]>(this.challengersUrl)
-      .pipe(
-        tap(_ => this.log('fetched challengers')),
-        catchError(this.handleError<Challenger[]>('getChallengers', []))
-      );
+    const url = `${this.challengersUrl}/list`;
+    return this.http.get<Challenger[]>(url).pipe(
+      map(response => {
+        return response["challengers"];
+      }),
+      tap(_ => this.log('fetched challengers')),
+      catchError(this.handleError<Challenger[]>('getChallengers', []))
+    );
   }
 
   getChallenger(id: number): Observable<Challenger> {
-    const url = `${this.challengersUrl}/${id}`;
+    const url = `${this.challengersUrl}/badges?id=${id}`;
     return this.http.get<Challenger>(url).pipe(
+      map(response => {
+        let challenger: Challenger = {
+          id: id,
+          badges: response["badges"].map(function(item) {
+            return item['id'];
+          })
+        };
+        return challenger;
+      }),
       tap(_ => this.log(`fetched challenger id=${id}`)),
       catchError(this.handleError<Challenger>(`getChallenger id=${id}`))
     );
@@ -35,11 +47,15 @@ export class ChallengerService {
 
   /* GET challengers whose name contains search term */
   searchChallengers(term: string): Observable<Challenger[]> {
+    const url = `${this.challengersUrl}/search?name=${term}`;
     if (!term.trim()) {
       // if not search term, return empty challenger array.
       return of([]);
     }
-    return this.http.get<Challenger[]>(`${this.challengersUrl}/?name=${term}`).pipe(
+    return this.http.get<Challenger[]>(url).pipe(
+      map(response => {
+        return response["challengers"];
+      }),
       tap(x => x.length ?
         this.log(`found challengers matching "${term}"`) :
         this.log(`no challengers matching "${term}"`)),

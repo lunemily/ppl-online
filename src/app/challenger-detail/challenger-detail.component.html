@@ -31,7 +31,7 @@
                 <span class="blox right">Beat any 4 elites to go on to the champion</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.emblems.indexOf(emblem) === -1}" class="emblem emblem-size portrait-container">
+                <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.badges.indexOf(emblem) === -1}" class="emblem emblem-size portrait-container">
                     <img class="portrait" alt="{{ emblem }}" title="{{ emblem }}" src="assets/images/portraits/{{ emblem }}.png" />
                     <img class="badge" src="assets/images/badges/{{ emblem }}.png" />
                 </div>
@@ -43,7 +43,7 @@
                 <span class="blox right">Collect 8 gym badges and 4 emblems to face the champion</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.champions.indexOf(champion) === -1}" class="champion champion-size portrait-container">
+                <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.badges.indexOf(champion) === -1}" class="champion champion-size portrait-container">
                     <img class="portrait" alt="{{ champion }}" title="{{ champion }}" src="assets/images/portraits/{{ champion }}.png" />
                 </div>
             </div>
