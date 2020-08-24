@@ -28,7 +28,7 @@ export class ChallengerService {
     );
   }
 
-  getChallenger(id: number): Observable<Challenger> {
+  getChallenger(id: string): Observable<Challenger> {
     const url = `${this.challengersUrl}/badges?id=${id}`;
     return this.http.get<Challenger>(url).pipe(
       map(response => {

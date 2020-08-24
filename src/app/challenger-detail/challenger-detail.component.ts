@@ -16,43 +16,151 @@ export class ChallengerDetailComponent implements OnInit {
 
   @Input() challenger: Challenger;
 
-  casualLeaders: String[] = [
-    "235754020738695168",
-    "193573529684410369",
-    "109799203152121856",
-    "180177605213814784",
-    "305375865838239744",
-    "184101500170141697",
-    "234814727686062080",
-    "273311518462836737",
-    "192169923332538369",
+  casualLeaders: Badge[] = [
+    {
+      id: "235754020738695168",
+      name: "Aurethious, the Emerald Knight",
+      badgeName: "Emerald Badge"
+    },
+    {
+      id: "193573529684410369",
+      name: "Simple Kenny, the Berry Farmer",
+      badgeName: "Berry Badge"
+    },
+    {
+      id: "109799203152121856",
+      name: "Mr Pizza, the PokéChef",
+      badgeName: "Culinary Badge"
+    },
+    {
+      id: "180177605213814784",
+      name: "Emmett, the Special",
+      badgeName: "Piece of Resistance Badge"
+    },
+    {
+      id: "305375865838239744",
+      name: "Yoshua, the Birdwatcher",
+      badgeName: "Plume Badge"
+    },
+    {
+      id: "184101500170141697",
+      name: "Tom Roe, Candela's Firewall",
+      badgeName: "Valiant Badge"
+    },
+    {
+      id: "234814727686062080",
+      name: "Lyra, the Monster Rider",
+      badgeName: "Kinship Badge"
+    },
+    {
+      id: "273311518462836737",
+      name: "Muckfoot, the Marsh Druid",
+      badgeName: "Swamp Lantern Badge"
+    },
+    {
+      id: "192169923332538369",
+      name: "Red, the Twitch User",
+      badgeName: "Helix Badge"
+    }
   ];
 
-  veteranLeaders: String[] = [
-    "429744942345224192",
-    "414424342395617281",
-    "123251048797175808",
-    "268233272138399754",
-    "436625927519076352",
-    "221279588997791744",
-    "315398097218043905",
-    "126537033685532672",
-    "356256546646130692",
-    "181442238864293889",
+  veteranLeaders: Badge[] = [
+    {
+      id: "429744942345224192",
+      name: "Rosy, the Rabbit Wrangler",
+      badgeName: "Bunny Badge"
+    },
+    {
+      id: "414424342395617281",
+      name: "Yakumo, Narrator of Horrors",
+      badgeName: "Occult Badge"
+    },
+    {
+      id: "123251048797175808",
+      name: "Lionheart, the Master Magi",
+      badgeName: "Master Magi Badge"
+    },
+    {
+      id: "268233272138399754",
+      name: "Sakurai, the Mechanical Tactician",
+      badgeName: "Mechanical Badge"
+    },
+    {
+      id: "436625927519076352",
+      name: "Brick Tamland, the Nutty Meterologist!",
+      badgeName: "Forecast Badge"
+    },
+    {
+      id: "221279588997791744",
+      name: "Virgil, The Haunted Guide",
+      badgeName: "Possessed Badge"
+    },
+    {
+      id: "315398097218043905",
+      name: "Barnum, the Fossil Hunter",
+      badgeName: "Fossil Badge"
+    },
+    {
+      id: "126537033685532672",
+      name: "TohruChu, Head of Dragon Maid Manor",
+      badgeName: "Hospitality Badge"
+    },
+    {
+      id: "356256546646130692",
+      name: "Patrick Pinkerton, the Pink Pokémon Promoter",
+      badgeName: "Pink Badge"
+    },
+    {
+      id: "181442238864293889",
+      name: "Captain Rusty, the Seafaring Wanderer",
+      badgeName: "Galleon Badge"
+    }
   ];
 
-  elites: String[] = [
-    "229338714336264192",
-    "127202978586165248",
-    "259658592573980673",
-    "156540419180593153",
-    "340559329000423424",
-    "372623885201440768",
+  elites: Badge[] = [
+    {
+      id: "229338714336264192",
+      name: "Rhonder, the Winter Warrior",
+      badgeName: "Absolute Zero Emblem"
+    },
+    {
+      id: "127202978586165248",
+      name: "Kellan, the Twisted Alchemist",
+      badgeName: "Caustic Emblem"
+    },
+    {
+      id: "259658592573980673",
+      name: "Rune, Your Local Cryptozoologist",
+      badgeName: "Duality Emblem"
+    },
+    {
+      id: "156540419180593153",
+      name: "Aidan, The Draconic Master",
+      badgeName: "Darting Dragon Dance Emblem"
+    },
+    {
+      id: "340559329000423424",
+      name: "Cryo, Twister of the Elements",
+      badgeName: "Floe Emblem"
+    },
+    {
+      id: "372623885201440768",
+      name: "Akira, The Kaiju Enthusiast",
+      badgeName: "Titan Emblem"
+    }
   ];
 
-  champions: String[] = [
-    "504917257491578880",
-    "112662192523853824",
+  champions: Badge[] = [
+    {
+      id: "504917257491578880",
+      name: "Eleanora, the Exquisite Entomologist",
+      badgeName: "Collector Emblem"
+    },
+    {
+      id: "112662192523853824",
+      name: "Scoot, the Woolly Gentleman",
+      badgeName: "Stache Emblem"
+    }
   ]
 
   constructor(
@@ -69,7 +177,7 @@ export class ChallengerDetailComponent implements OnInit {
 
   getChallenger(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.challengerService.getChallenger(id)
+    this.challengerService.getChallenger(id.toString())
       .subscribe(challenger => this.challenger = challenger);
   }
 

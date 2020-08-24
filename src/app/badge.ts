@@ -1,5 +1,5 @@
 export interface Badge {
-    id: number;
+    id: string;
     name: string;
     badgeName: string;
   }

@@ -17,7 +17,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { InMemoryDataService } from './in-memory-data.service';
 
 import { ChallengersComponent } from './challengers/challengers.component';
 import { ChallengerDetailComponent } from './challenger-detail/challenger-detail.component';
