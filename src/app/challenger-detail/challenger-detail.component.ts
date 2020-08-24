@@ -176,8 +176,8 @@ export class ChallengerDetailComponent implements OnInit {
   }
 
   getChallenger(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.challengerService.getChallenger(id.toString())
+    const id = this.route.snapshot.paramMap.get('id');
+    this.challengerService.getChallenger(id)
       .subscribe(challenger => this.challenger = challenger);
   }
 

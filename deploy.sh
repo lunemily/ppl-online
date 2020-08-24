@@ -3,15 +3,13 @@
 set -x
 
 ng build --prod --output-path docs --base-href /ppl-online/
-echo ""
 
 cp docs/index.html docs/404.html
-echo ""
+
+echo "cometpenguinstudio.com" > docs/CNAME
 
 git add .
-echo ""
 
 git commit -m "$1"
-echo ""
 
 git push
