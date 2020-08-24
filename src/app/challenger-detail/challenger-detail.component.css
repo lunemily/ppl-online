@@ -61,6 +61,10 @@ h2 {
   padding: 0.5em;
 }
 
+.tooltip {
+  font-size: 1em;
+}
+
 img.portrait {
   width: 100px;
   height: 100px;
@@ -270,7 +274,6 @@ img.badge, img.emblem {
 
 @media (min-width: 600px) {
   img.badge, img.emblem {
-    display: block;
     height: 40px;
     width: 40px;
   }
@@ -278,8 +281,25 @@ img.badge, img.emblem {
 
 @media (min-width: 990px) {
   .trainer-card {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 990px;
     padding: 0 1em 1em 1em;
   }
+  img.portrait {
+    width: 200px;
+    height: 200px;
+    position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+  }
+  img.badge, img.emblem {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+@media (min-width: 1440px) {
 }

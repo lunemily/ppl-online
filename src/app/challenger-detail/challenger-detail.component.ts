@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Challenger } from '../challenger';
 import { Badge } from '../badge';
 import { ActivatedRoute } from '@angular/router';
@@ -10,7 +10,10 @@ import { HeaderService } from '../header.service';
 @Component({
   selector: 'app-challenger-detail',
   templateUrl: './challenger-detail.component.html',
-  styleUrls: ['./challenger-detail.component.css']
+  styleUrls: ['./challenger-detail.component.css'],
+  // Need to remove view encapsulation so that the custom tooltip style defined in
+  // `tooltip-custom-class-example.css` will not be scoped to this component's view.
+  encapsulation: ViewEncapsulation.None,
 })
 export class ChallengerDetailComponent implements OnInit {
 

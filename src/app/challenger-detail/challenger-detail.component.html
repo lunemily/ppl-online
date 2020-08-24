@@ -9,8 +9,19 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let badge of this.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge.id) === -1}" class="casual casual-size portrait-container">
-                    <img class="portrait" alt="{{ badge.name }}" title="{{ badge.name }}" src="assets/images/portraits/{{ badge.id }}.png" />
-                    <img class="badge" alt="{{ badge.badgeName }}" title="{{ badge.badgeName }}" src="assets/images/badges/{{ badge.id }}.png" />
+                    <!-- <div class="name"><span>{{ badge.name.split(',')[0] }}</span></div> -->
+                    <img class="portrait"
+                            alt="{{ badge.name }}"
+                            matTooltip="{{ badge.name }}"
+                            matTooltipPosition="above"
+                            matTooltipClass="tooltip"
+                            src="assets/images/portraits/{{ badge.id }}.png" />
+                    <img class="badge"
+                            alt="{{ badge.badgeName }}"
+                            matTooltip="{{ badge.badgeName }}"
+                            matTooltipPosition="below"
+                            matTooltipClass="tooltip"
+                            src="assets/images/badges/{{ badge.id }}.png" />
                 </div>
             </div>
         </div>
@@ -20,8 +31,19 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let badge of this.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge.id) === -1}" class="veteran veteran-size portrait-container">
-                    <img class="portrait" alt="{{ badge.name }}" title="{{ badge.name }}" src="assets/images/portraits/{{ badge.id }}.png" />
-                    <img class="badge" alt="{{ badge.badgeName }}" title="{{ badge.badgeName }}" src="assets/images/badges/{{ badge.id }}.png" />
+                    <!-- <div class="name"><span>{{ badge.name.split(',')[0] }}</span></div> -->
+                    <img class="portrait"
+                            alt="{{ badge.name }}"
+                            matTooltip="{{ badge.name }}"
+                            matTooltipPosition="above"
+                            matTooltipClass="tooltip"
+                            src="assets/images/portraits/{{ badge.id }}.png" />
+                    <img class="badge"
+                            alt="{{ badge.badgeName }}"
+                            matTooltip="{{ badge.badgeName }}"
+                            matTooltipPosition="below"
+                            matTooltipClass="tooltip"
+                            src="assets/images/badges/{{ badge.id }}.png" />
                 </div>
             </div>
         </div>
@@ -32,8 +54,19 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.badges.indexOf(emblem.id) === -1}" class="emblem emblem-size portrait-container">
-                    <img class="portrait" alt="{{ emblem.name }}" title="{{ emblem.name }}" src="assets/images/portraits/{{ emblem.id }}.png" />
-                    <img class="badge" alt="{{ emblem.badgeName }}" title="{{ emblem.badgeName }}" src="assets/images/badges/{{ emblem.id }}.png" />
+                    <!-- <div class="name"><span>{{ emblem.name.split(',')[0] }}</span></div> -->
+                    <img class="portrait"
+                    alt="{{ emblem.name }}"
+                    matTooltip="{{ emblem.name }}"
+                    matTooltipPosition="above"
+                    matTooltipClass="tooltip"
+                    src="assets/images/portraits/{{ emblem.id }}.png" />
+            <img class="badge"
+                    alt="{{ emblem.badgeName }}"
+                    matTooltip="{{ emblem.badgeName }}"
+                    matTooltipPosition="below"
+                    matTooltipClass="tooltip"
+                    src="assets/images/badges/{{ emblem.id }}.png" />
                 </div>
             </div>
         </div>
@@ -44,7 +77,13 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.badges.indexOf(champion.id) === -1}" class="champion champion-size portrait-container">
-                    <img class="portrait" alt="{{ champion.name }}" title="{{ champion.name }}" src="assets/images/portraits/{{ champion.id }}.png" />
+                    <!-- <div class="name"><span>{{ champion.name.split(',')[0] }}</span></div> -->
+                    <img class="portrait"
+                            alt="{{ champion.name }}"
+                            matTooltip="{{ champion.name }}"
+                            matTooltipPosition="above"
+                            matTooltipClass="tooltip"
+                            src="assets/images/portraits/{{ champion.id }}.png" />
                 </div>
             </div>
         </div>
