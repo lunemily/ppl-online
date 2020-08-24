@@ -16,42 +16,42 @@ export class ChallengerDetailComponent implements OnInit {
   @Input() challenger: Challenger;
 
   casualLeaders: String[] = [
-    "Aurethious",
-    "Simple Kenny",
-    "Mr Pizza",
-    "Emmett",
-    "Yoshua",
-    "Tom Roe",
-    "Lyra",
-    "Muckfoot",
-    "Red",
+    "235754020738695168",
+    "193573529684410369",
+    "109799203152121856",
+    "180177605213814784",
+    "305375865838239744",
+    "184101500170141697",
+    "234814727686062080",
+    "273311518462836737",
+    "192169923332538369",
   ];
 
   veteranLeaders: String[] = [
-    "Rosy",
-    "Yakumo",
-    "Lionheart",
-    "Sakurai",
-    "Brick Tamland",
-    "Virgil",
-    "Barnum",
-    "TohruChu",
-    "Patrick Pinkerton",
-    "Capt Rusty",
+    "429744942345224192",
+    "414424342395617281",
+    "123251048797175808",
+    "268233272138399754",
+    "436625927519076352",
+    "221279588997791744",
+    "315398097218043905",
+    "126537033685532672",
+    "356256546646130692",
+    "181442238864293889",
   ];
 
   elites: String[] = [
-    "Rhonder",
-    "Kellan",
-    "Rune",
-    "Aidan",
-    "Cryo",
-    "Akira",
+    "229338714336264192",
+    "127202978586165248",
+    "259658592573980673",
+    "156540419180593153",
+    "340559329000423424",
+    "372623885201440768",
   ];
 
   champions: String[] = [
-    "Eleanora",
-    "scoot",
+    "504917257491578880",
+    "112662192523853824",
   ]
 
   constructor(
