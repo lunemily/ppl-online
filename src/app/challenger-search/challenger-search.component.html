@@ -16,7 +16,7 @@
   <mat-autocomplete #auto="matAutocomplete">
     <mat-option *ngFor="let challenger of challengers$ | async"
     [value]="challenger.name"
-    routerLink="/detail/{{challenger.id}}">
+    routerLink="/trainercard/{{challenger.id}}">
       {{challenger.name}}
     </mat-option>
   </mat-autocomplete>

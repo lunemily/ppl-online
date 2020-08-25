@@ -1,7 +1,7 @@
 <div *ngIf="challenger">
 
     <mat-card class="trainer-card">
-        <h2>TRAINER CARD</h2>
+        <h2>{{challenger.name | uppercase }}'S TRAINER CARD</h2>
         <div class="casual-badges section">
             <div class="header">
                 <span class="codehack left">Casual Gym Leaders</span>
@@ -90,5 +90,5 @@
     </mat-card>
 </div>
 <br>
-<a id="challengers" mat-raised-button color="primary" routerLink="/challengers">Challengers</a>
+<a id="challengers" mat-raised-button color="primary" routerLink="/challengers">Back to Challengers</a>
 

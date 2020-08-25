@@ -3,7 +3,7 @@
 </mat-card>
 <mat-card class="trainer-card">
     <mat-selection-list [multiple]="false">
-        <mat-list-option *ngFor="let challenger of challengers" routerLink="/detail/{{challenger.id}}">
+        <mat-list-option *ngFor="let challenger of challengers" routerLink="/trainercard/{{challenger.id}}">
             {{ challenger.name | uppercase }}
         </mat-list-option>
     </mat-selection-list>

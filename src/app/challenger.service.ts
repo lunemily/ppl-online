@@ -34,6 +34,7 @@ export class ChallengerService {
       map(response => {
         let challenger: Challenger = {
           id: id,
+          name: response["name"],
           badges: response["badges"].map(function(item) {
             return item['id'];
           })

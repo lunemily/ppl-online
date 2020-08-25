@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/challengers', pathMatch: 'full' },
   { path: 'challengers', component: ChallengersComponent },
   // { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: ChallengerDetailComponent },
+  { path: 'trainercard/:id', component: ChallengerDetailComponent },
 ];
 
 @NgModule({
