@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Challenger } from '../challenger';
 import { ChallengerService } from '../challenger.service';
@@ -14,12 +15,15 @@ export class ChallengersComponent implements OnInit {
   challengers: Challenger[];
 
   constructor(
+    private route: ActivatedRoute,
     private challengerService: ChallengerService,
     private headerService: HeaderService
   ) { }
 
   ngOnInit(): void {
-    this.getChallengers();
+    if(!(!!this.route.snapshot.queryParams.id)) {
+      this.getChallengers();
+    }
     this.headerService.setUrl(window.location.href);
   }
 

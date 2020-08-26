@@ -174,7 +174,9 @@ export class ChallengerDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getChallenger();
+    if(!!this.route.snapshot.queryParams.id) {
+      this.getChallenger();
+    }
     this.headerService.setUrl(window.location.href);
   }
 
@@ -182,26 +184,6 @@ export class ChallengerDetailComponent implements OnInit {
     const id = this.route.snapshot.queryParams.id;
     this.challengerService.getChallenger(id)
       .subscribe(challenger => this.challenger = challenger);
-    
-  }
-
-
-  // -> Fisher–Yates shuffle algorithm
-  shuffleArray(array: string[]): string[] {
-    var m = array.length, t, i;
-  
-    // While there remain elements to shuffle
-    while (m) {
-      // Pick a remaining element…
-      i = Math.floor(Math.random() * m--);
-  
-      // And swap it with the current element.
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-  
-    return array;
   }
 
   goBack(): void {
