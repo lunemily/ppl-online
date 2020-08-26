@@ -46,6 +46,7 @@ h2 {
   display: block;
   padding: 0.5em;
   clear: both;
+  line-height: 0;
 }
 
 .portrait-container {
@@ -129,8 +130,8 @@ img.badge, img.emblem {
                -2px 2px #2f808a;
 }
 
-.casual-size {
-  width: 9.5%;
+.casual-size, .veteran-size, .champion-size {
+  width: 18%;
 }
 
 .veteran {
@@ -158,10 +159,6 @@ img.badge, img.emblem {
               -2px -2px #4992c6,
                -2px 0px #4992c6,
                -2px 2px #4992c6;
-}
-
-.veteran-size {
-  width: 8.5%
 }
 
 .emblem {
@@ -210,8 +207,8 @@ img.badge, img.emblem {
                -2px 2px #af0996;
 }
 
-.emblem-size, .champion-size {
-  width: 12%
+.emblem-size {
+  width: 15%
 }
 
 .champions {
@@ -273,9 +270,17 @@ img.badge, img.emblem {
 }
 
 @media (min-width: 600px) {
+  img.portrait {
+    width: 150px;
+    height: 150px;
+    position: relative; /* allows repositioning */
+    left: 100%; /* move the whole width of the image to the right */
+    margin-left: -200%; /* magic! */
+  }
   img.badge, img.emblem {
-    height: 40px;
-    width: 40px;
+    height: 75px;
+    width: 75px;
+    border: 4px solid #ffffff;
   }
 }
 
@@ -288,15 +293,15 @@ img.badge, img.emblem {
     padding: 0 1em 1em 1em;
   }
   img.portrait {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     position: relative; /* allows repositioning */
     left: 100%; /* move the whole width of the image to the right */
     margin-left: -200%; /* magic! */
   }
   img.badge, img.emblem {
-    height: 50px;
-    width: 50px;
+    height: 125px;
+    width: 125px;
   }
 }
 

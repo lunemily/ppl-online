@@ -184,6 +184,7 @@ export class ChallengerDetailComponent implements OnInit {
     const id = this.route.snapshot.queryParams.id;
     this.challengerService.getChallenger(id)
       .subscribe(challenger => this.challenger = challenger);
+    // this.challenger = {"id": id, "name":"Test Account","badges":[]};
   }
 
   goBack(): void {

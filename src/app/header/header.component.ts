@@ -37,4 +37,8 @@ export class HeaderComponent implements OnInit {
   openRules() {
     window.open("assets/images/rules.png");
   }
+
+  openSchedule() {
+    window.open("https://docs.google.com/spreadsheets/d/1EM6t0mnE3UnUUhVGPmOM5x6yM60RaTgrxEU5h_hygnw/edit?usp=sharing");
+  }
 }

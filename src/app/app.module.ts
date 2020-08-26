@@ -22,7 +22,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChallengersComponent } from './challengers/challengers.component';
 import { ChallengerDetailComponent } from './challenger-detail/challenger-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChallengerSearchComponent } from './challenger-search/challenger-search.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +33,6 @@ import { FooterComponent } from './footer/footer.component';
     ChallengersComponent,
     ChallengerDetailComponent,
     MessagesComponent,
-    DashboardComponent,
     ChallengerSearchComponent,
     HeaderComponent,
     FooterComponent,
