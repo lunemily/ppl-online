@@ -1,5 +1,4 @@
 <div *ngIf="challenger">
-
     <mat-card class="trainer-card">
         <h2>{{challenger.name | uppercase }}'S TRAINER CARD</h2>
         <div class="casual-badges section">
@@ -88,7 +87,9 @@
             </div>
         </div>
     </mat-card>
+    <br>
+    <a id="challengers" mat-raised-button color="primary" href="">Back to Challengers</a>
 </div>
 <br>
-<a id="challengers" mat-raised-button color="primary" routerLink="/challengers">Back to Challengers</a>
+<app-challengers *ngIf="!challenger"></app-challengers>
 

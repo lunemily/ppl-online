@@ -48,3 +48,8 @@ mat-card {
   margin: 1em auto;
   background-color: #f5f5f5;
 }
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: rgba(0,0,0,.87);
+}
