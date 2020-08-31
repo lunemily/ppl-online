@@ -72,7 +72,7 @@
         <div class="champions section">
             <div class="header">
                 <span class="codehack left">Champions</span>
-                <span class="blox right">Collect 8 gym badges and 4 emblems to face the champion</span>
+                <span class="blox right">Defeat either champion to enter the PPL Online Hall of Fame!</span>
             </div>
             <div class=portraits>
                 <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.badges.indexOf(champion.id) === -1}" class="champion champion-size portrait-container">

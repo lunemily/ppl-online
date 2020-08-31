@@ -90,7 +90,7 @@ export class ChallengerDetailComponent implements OnInit {
     },
     {
       id: "436625927519076352",
-      name: "Brick Tamland, the Nutty Meterologist!",
+      name: "Brick Tamland, the Nutty Meterologist",
       badgeName: "Forecast Badge"
     },
     {
