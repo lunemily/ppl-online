@@ -12,7 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class HeaderComponent implements OnInit {
 
-  title: string = "PPL \'20 Online";
+  title: string = "PPL \'21      Online";
 
   constructor(
     private router : Router,

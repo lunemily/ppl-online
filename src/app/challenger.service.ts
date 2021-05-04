@@ -28,6 +28,7 @@ export class ChallengerService {
     );
   }
 
+  /** GET badges for challenger from the server */
   getChallenger(id: string): Observable<Challenger> {
     const url = `${this.challengersUrl}/badges?id=${id}`;
     return this.http.get<Challenger>(url).pipe(
