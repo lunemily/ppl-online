@@ -19,6 +19,7 @@ export class ChallengerDetailComponent implements OnInit {
 
   @Input() challenger: Challenger;
 
+  // Easier to just hardcode the leaders into this file. Perhaps look at storing them in some local json file.
   casualLeaders: Badge[] = [
     {
       id: "235754020738695168",
@@ -182,9 +183,28 @@ export class ChallengerDetailComponent implements OnInit {
 
   getChallenger(): void {
     const id = this.route.snapshot.queryParams.id;
-    this.challengerService.getChallenger(id)
-      .subscribe(challenger => this.challenger = challenger);
-    // this.challenger = {"id": id, "name":"Test Account","badges":[]};
+    // this.challengerService.getChallenger(id)
+    //   .subscribe(challenger => this.challenger = challenger);
+    this.challenger = {
+      "id": id,
+      "name": "Erkenhelm",
+      "badges": [
+        "127202978586165248",
+        "184101500170141697",
+        "340559329000423424",
+        "372623885201440768",
+        "126537033685532672",
+        "504917257491578880"
+      ],
+      "queueOpen": [
+        "127202978586165248",
+        "184101500170141697",
+        "340559329000423424",
+        "372623885201440768",
+        "126537033685532672",
+        "504917257491578880"
+      ]
+    };
   }
 
   goBack(): void {

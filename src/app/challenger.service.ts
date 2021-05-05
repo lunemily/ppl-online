@@ -30,7 +30,7 @@ export class ChallengerService {
 
   /** GET badges for challenger from the server */
   getChallenger(id: string): Observable<Challenger> {
-    const url = `${this.challengersUrl}/badges?id=${id}`;
+    const url = `${this.challengersUrl}/badgesv2?id=${id}`;
     return this.http.get<Challenger>(url).pipe(
       map(response => {
         let challenger: Challenger = {
@@ -38,6 +38,9 @@ export class ChallengerService {
           name: response["name"],
           badges: response["badges"].map(function(item) {
             return item['id'];
+          }),
+          queueOpen: response["badges"].map(function(item) {
+            return item['queueOpen'];
           })
         };
         return challenger;

@@ -8,18 +8,38 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let badge of this.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge.id) === -1}" class="casual casual-size portrait-container">
-                    <img class="portrait"
-                            alt="{{ badge.name }}"
-                            matTooltip="{{ badge.name }}"
-                            matTooltipPosition="above"
-                            matTooltipClass="tooltip"
-                            src="assets/images/portraits/{{ badge.id }}.png" />
-                    <img class="badge"
-                            alt="{{ badge.badgeName }}"
-                            matTooltip="{{ badge.badgeName }}"
-                            matTooltipPosition="below"
-                            matTooltipClass="tooltip"
-                            src="assets/images/badges/{{ badge.id }}.png" />
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="portrait"
+                                        alt="{{ badge.name }}"
+                                        src="assets/images/portraits/{{ badge.id }}.png" />
+                            </td>
+                            <td>
+                                <img class="badge"
+                                        alt="{{ badge.badgeName }}"
+                                        src="assets/images/badges/{{ badge.id }}.png" />
+                            </td>
+                            <td class="info-panel">
+                                <div class="info-panel">
+                                    <tr>
+                                        <span>{{ badge.name }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>{{ badge.badgeName }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>Taking challengers now</span>
+                                    </tr>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bio-panel">
+                                    <span>Lorem Ipsum yada yada yada</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -29,40 +49,80 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let badge of this.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(badge.id) === -1}" class="veteran veteran-size portrait-container">
-                    <img class="portrait"
-                            alt="{{ badge.name }}"
-                            matTooltip="{{ badge.name }}"
-                            matTooltipPosition="above"
-                            matTooltipClass="tooltip"
-                            src="assets/images/portraits/{{ badge.id }}.png" />
-                    <img class="badge"
-                            alt="{{ badge.badgeName }}"
-                            matTooltip="{{ badge.badgeName }}"
-                            matTooltipPosition="below"
-                            matTooltipClass="tooltip"
-                            src="assets/images/badges/{{ badge.id }}.png" />
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="portrait"
+                                        alt="{{ badge.name }}"
+                                        src="assets/images/portraits/{{ badge.id }}.png" />
+                            </td>
+                            <td>
+                                <img class="badge"
+                                        alt="{{ badge.badgeName }}"
+                                        src="assets/images/badges/{{ badge.id }}.png" />
+                            </td>
+                            <td class="info-panel">
+                                <div class="info-panel">
+                                    <tr>
+                                        <span>{{ badge.name }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>{{ badge.badgeName }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>Taking challengers now</span>
+                                    </tr>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bio-panel">
+                                    <span>Lorem Ipsum yada yada yada</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="emblems section">
+        <div class="elites section">
             <div class="header">
                 <span class="codehack left">Elite 6</span>
                 <span class="blox right">Beat any 4 elites to go on to the champion</span>
             </div>
             <div class=portraits>
-                <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.badges.indexOf(emblem.id) === -1}" class="emblem emblem-size portrait-container">
-                    <img class="portrait"
-                    alt="{{ emblem.name }}"
-                    matTooltip="{{ emblem.name }}"
-                    matTooltipPosition="above"
-                    matTooltipClass="tooltip"
-                    src="assets/images/portraits/{{ emblem.id }}.png" />
-            <img class="badge"
-                    alt="{{ emblem.badgeName }}"
-                    matTooltip="{{ emblem.badgeName }}"
-                    matTooltipPosition="below"
-                    matTooltipClass="tooltip"
-                    src="assets/images/badges/{{ emblem.id }}.png" />
+                <div *ngFor="let emblem of this.elites" [ngClass]="{'unearned': challenger.badges.indexOf(emblem.id) === -1}" class="elite elite-size portrait-container">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="portrait"
+                                        alt="{{ emblem.name }}"
+                                        src="assets/images/portraits/{{ emblem.id }}.png" />
+                            </td>
+                            <td>
+                                <img class="badge"
+                                        alt="{{ emblem.badgeName }}"
+                                        src="assets/images/badges/{{ emblem.id }}.png" />
+                            </td>
+                            <td class="info-panel">
+                                <div class="info-panel">
+                                    <tr>
+                                        <span>{{ emblem.name }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>{{ emblem.badgeName }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>Taking challengers now</span>
+                                    </tr>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bio-panel">
+                                    <span>Lorem Ipsum yada yada yada</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -73,12 +133,38 @@
             </div>
             <div class=portraits>
                 <div *ngFor="let champion of this.champions" [ngClass]="{'unearned': challenger.badges.indexOf(champion.id) === -1}" class="champion champion-size portrait-container">
-                    <img class="portrait"
-                            alt="{{ champion.name }}"
-                            matTooltip="{{ champion.name }}"
-                            matTooltipPosition="above"
-                            matTooltipClass="tooltip"
-                            src="assets/images/portraits/{{ champion.id }}.png" />
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="portrait"
+                                        alt="{{ champion.name }}"
+                                        src="assets/images/portraits/{{ champion.id }}.png" />
+                            </td>
+                            <td>
+                                <img class="badge"
+                                        alt="{{ champion.badgeName }}"
+                                        src="assets/images/badges/{{ champion.id }}.png" />
+                            </td>
+                            <td class="info-panel">
+                                <div class="info-panel">
+                                    <tr>
+                                        <span>{{ champion.name }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>{{ champion.badgeName }}</span>
+                                    </tr>
+                                    <tr>
+                                        <span>Taking challengers now</span>
+                                    </tr>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="bio-panel">
+                                    <span>Lorem Ipsum yada yada yada</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

@@ -43,7 +43,7 @@ h2 {
 }
 
 .portraits {
-  display: block;
+  display: inline-block;
   padding: 0.5em;
   clear: both;
   line-height: 0;
@@ -53,8 +53,6 @@ h2 {
   border: 2px solid #ffffff;
   display: inline-block;
   text-align: center; /* ensures the image is always in the h-middle */
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 .badges {
@@ -66,22 +64,25 @@ h2 {
   font-size: 1em;
 }
 
-img.portrait {
+.portrait {
   width: 100px;
   height: 100px;
-  position: relative; /* allows repositioning */
-  left: 100%; /* move the whole width of the image to the right */
-  margin-left: -200%; /* magic! */
 }
 
-img.badge, img.emblem {
-  display: block;
+.badge, .emblem {
+  display: inline-block;
   height: 25px;
   width: 25px;
   border: 2px solid #ffffff;
   border-radius: 100%;
-  margin: 0.5em auto 1em;
+  margin: 30px 0;
   clear: both;
+}
+
+.info-panel {
+  line-height: 2em;
+  text-align: left;
+  width: 200px;
 }
 
 .casual {
@@ -130,8 +131,9 @@ img.badge, img.emblem {
                -2px 2px #2f808a;
 }
 
-.casual-size, .veteran-size, .champion-size {
-  width: 18%;
+.casual-size, .veteran-size, .elite-size, .champion-size {
+  width: 98%;
+  margin: auto;
 }
 
 .veteran {
@@ -161,15 +163,15 @@ img.badge, img.emblem {
                -2px 2px #4992c6;
 }
 
-.emblem {
+.elite {
   background-color: #238355;
 }
 
-.emblems {
+.elites {
   background-color: #71ff77;
 }
 
-.emblems * span.codehack {
+.elites * span.codehack {
   text-shadow:  0px 1px #206626,
                 1px 1px #206626,
                 1px 0px #206626,
@@ -188,7 +190,7 @@ img.badge, img.emblem {
                -2px 2px #206626;
 }
 
-.emblems * span.blox {
+.elites * span.blox {
   text-shadow:  0px 1px #af0996,
                 1px 1px #af0996,
                 1px 0px #af0996,
@@ -205,10 +207,6 @@ img.badge, img.emblem {
               -2px -2px #af0996,
                -2px 0px #af0996,
                -2px 2px #af0996;
-}
-
-.emblem-size {
-  width: 15%
 }
 
 .champions {
@@ -273,11 +271,8 @@ img.badge, img.emblem {
   img.portrait {
     width: 150px;
     height: 150px;
-    position: relative; /* allows repositioning */
-    left: 100%; /* move the whole width of the image to the right */
-    margin-left: -200%; /* magic! */
   }
-  img.badge, img.emblem {
+  img.badge {
     height: 75px;
     width: 75px;
     border: 4px solid #ffffff;
@@ -295,13 +290,11 @@ img.badge, img.emblem {
   img.portrait {
     width: 250px;
     height: 250px;
-    position: relative; /* allows repositioning */
-    left: 100%; /* move the whole width of the image to the right */
-    margin-left: -200%; /* magic! */
   }
-  img.badge, img.emblem {
+  img.badge {
     height: 125px;
     width: 125px;
+    margin: 52px 0;
   }
 }
 
