@@ -42,22 +42,25 @@ h2 {
   padding: 0.5em;
 }
 
-.portraits {
+.leaders-container {
   display: inline-block;
   padding: 0.5em;
   clear: both;
   line-height: 0;
 }
 
-.portrait-container {
+.leader-row {
   border: 2px solid #ffffff;
   display: inline-block;
   text-align: center; /* ensures the image is always in the h-middle */
+  width: 98%;
+  margin: auto;
 }
 
-.badges {
-  display: block;
-  padding: 0.5em;
+.panel {
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 .tooltip {
@@ -83,6 +86,24 @@ h2 {
   line-height: 2em;
   text-align: left;
   width: 200px;
+}
+
+.queue {
+  font-weight: 700;
+  border-radius: 10px;
+  border: 3px solid;
+}
+
+.queue-open {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.queue-closed {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
 .casual {
@@ -129,11 +150,6 @@ h2 {
               -2px -2px #2f808a,
                -2px 0px #2f808a,
                -2px 2px #2f808a;
-}
-
-.casual-size, .veteran-size, .elite-size, .champion-size {
-  width: 98%;
-  margin: auto;
 }
 
 .veteran {
@@ -255,7 +271,7 @@ h2 {
                -2px 2px #33eb46;
 }
 
-.unearned.portrait-container {
+.unearned.leader-row {
   background-color: #555555;
 }
 

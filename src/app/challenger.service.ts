@@ -37,10 +37,14 @@ export class ChallengerService {
           id: id,
           name: response["name"],
           badges: response["badges"].map(function(item) {
-            return item['id'];
+            if (item['badgeWon'] === 1) {
+              return item['id'];
+            }
           }),
           queueOpen: response["badges"].map(function(item) {
-            return item['queueOpen'];
+            if (item['queueOpen'] === 1) {
+              return item['queueOpen'];
+            }
           })
         };
         return challenger;
