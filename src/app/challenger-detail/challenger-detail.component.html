@@ -7,7 +7,7 @@
                 <span class="blox right">Beat any 8 gym leaders to go on to the elite 6</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of this.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="casual leader-row">
+                <div *ngFor="let leader of challenger.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="casual leader-row">
                     <table>
                         <tr>
                             <td class="panel">
@@ -57,7 +57,7 @@
                 <span class="codehack left">Veteran Gym Leaders</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of this.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="veteran leader-row">
+                <div *ngFor="let leader of challenger.veteranLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="veteran leader-row">
                     <table>
                         <tr>
                             <td class="panel">
@@ -108,7 +108,7 @@
                 <span class="blox right">Beat any 4 elites to go on to the champion</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of this.elites" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="elite leader-row">
+                <div *ngFor="let leader of challenger.elites" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="elite leader-row">
                     <table>
                         <tr>
                             <td class="panel">
@@ -159,7 +159,7 @@
                 <span class="blox right">Defeat either champion to enter the ppl online hall of fame</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of this.champions" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="champion leader-row">
+                <div *ngFor="let leader of challenger.champions" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="champion leader-row">
                     <table>
                         <tr>
                             <td class="panel">

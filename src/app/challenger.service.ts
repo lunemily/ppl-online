@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Challenger } from './challenger';
+import { Badge } from './badge';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+
+import * as data from './leaders.json';
 
 
 @Injectable({
@@ -33,20 +36,36 @@ export class ChallengerService {
     const url = `${this.challengersUrl}/badgesv2?id=${id}`;
     return this.http.get<Challenger>(url).pipe(
       map(response => {
+
+        /** Create object to return. Add in all leaders now. */
         let challenger: Challenger = {
           id: id,
           name: response["name"],
           badges: response["badges"].map(function(item) {
-            if (item['badgeWon'] === 1) {
+            if (item["badgeWon"] === 1) {
               return item['id'];
             }
           }),
           queueOpen: response["badges"].map(function(item) {
-            if (item['queueOpen'] === 1) {
-              return item['queueOpen'];
+            if (item["queueOpen"] === 1) {
+              return item['id'];
             }
-          })
+          }),
+
+          /** All static pertinent leader information is stored in leaders.json */
+          casualLeaders: data.casualLeaders,
+          veteranLeaders: data.veteranLeaders,
+          elites: data.elites,
+          champions: data.champions,
         };
+        console.log(challenger);
+
+        /** Sort leaders by availability */
+        challenger.casualLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        challenger.veteranLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        challenger.elites.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        challenger.champions.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+
         return challenger;
       }),
       tap(_ => this.log(`fetched challenger id=${id}`)),
@@ -54,7 +73,7 @@ export class ChallengerService {
     );
   }
 
-  /* GET challengers whose name contains search term */
+  /** GET challengers whose name contains search term */
   searchChallengers(term: string): Observable<Challenger[]> {
     const url = `${this.challengersUrl}/search?name=${term}`;
     if (!term.trim()) {
