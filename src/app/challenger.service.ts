@@ -50,68 +50,68 @@ export class ChallengerService {
             }
           }),
           /** 0=casual,1=veteran,2=elite,3=champion */
-          // casualLeaders: response["badges"].reduce(function(result, item) {
-          //   if (item["type"] === 0) {
-          //     let badge: Badge = {
-          //       id: item["id"],
-          //       name: item["name"],
-          //       badgeName: item["badgeName"],
-          //       queueOpen: item["queueOpen"],
-          //       badgeWon: item["badgeWon"],
-          //       twitchName: item["twitchName"]
-          //     }
-          //     result.push(badge);
-          //   }
-          //   return result;
-          // }, []),
-          // veteranLeaders: response["badges"].reduce(function(result, item) {
-          //   if (item["type"] === 1) {
-          //     let badge: Badge = {
-          //       id: item["id"],
-          //       name: item["name"],
-          //       badgeName: item["badgeName"],
-          //       queueOpen: item["queueOpen"],
-          //       badgeWon: item["badgeWon"],
-          //       twitchName: item["twitchName"]
-          //     }
-          //     result.push(badge);
-          //   }
-          //   return result;
-          // }, []),
-          // elites: response["badges"].reduce(function(result, item) {
-          //   if (item["type"] === 2) {
-          //     let badge: Badge = {
-          //       id: item["id"],
-          //       name: item["name"],
-          //       badgeName: item["badgeName"],
-          //       queueOpen: item["queueOpen"],
-          //       badgeWon: item["badgeWon"],
-          //       twitchName: item["twitchName"]
-          //     }
-          //     result.push(badge);
-          //   }
-          //   return result;
-          // }, []),
-          // champions: response["badges"].reduce(function(result, item) {
-          //   if (item["type"] === 3) {
-          //     let badge: Badge = {
-          //       id: item["id"],
-          //       name: item["name"],
-          //       badgeName: item["badgeName"],
-          //       queueOpen: item["queueOpen"],
-          //       badgeWon: item["badgeWon"],
-          //       twitchName: item["twitchName"]
-          //     }
-          //     result.push(badge);
-          //   }
-          //   return result;
-          // }, []),
+          casualLeaders: response["badges"].reduce(function(result, item) {
+            if (item["type"] === 0) {
+              let badge: Badge = {
+                id: item["id"],
+                name: item["name"],
+                badgeName: item["badgeName"],
+                queueOpen: item["queueOpen"],
+                badgeWon: item["badgeWon"],
+                twitchName: item["twitchName"]
+              }
+              result.push(badge);
+            }
+            return result;
+          }, []),
+          veteranLeaders: response["badges"].reduce(function(result, item) {
+            if (item["type"] === 1) {
+              let badge: Badge = {
+                id: item["id"],
+                name: item["name"],
+                badgeName: item["badgeName"],
+                queueOpen: item["queueOpen"],
+                badgeWon: item["badgeWon"],
+                twitchName: item["twitchName"]
+              }
+              result.push(badge);
+            }
+            return result;
+          }, []),
+          elites: response["badges"].reduce(function(result, item) {
+            if (item["type"] === 2) {
+              let badge: Badge = {
+                id: item["id"],
+                name: item["name"],
+                badgeName: item["badgeName"],
+                queueOpen: item["queueOpen"],
+                badgeWon: item["badgeWon"],
+                twitchName: item["twitchName"]
+              }
+              result.push(badge);
+            }
+            return result;
+          }, []),
+          champions: response["badges"].reduce(function(result, item) {
+            if (item["type"] === 3) {
+              let badge: Badge = {
+                id: item["id"],
+                name: item["name"],
+                badgeName: item["badgeName"],
+                queueOpen: item["queueOpen"],
+                badgeWon: item["badgeWon"],
+                twitchName: item["twitchName"]
+              }
+              result.push(badge);
+            }
+            return result;
+          }, []),
         };
         console.log(challenger);
-        challenger.casualLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
-        challenger.veteranLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
-        challenger.elites.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
-        challenger.champions.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        // challenger.casualLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        // challenger.veteranLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        // challenger.elites.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        // challenger.champions.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
 
         return challenger;
       }),
