@@ -1,61 +1,91 @@
 {
     "casualLeaders": [
         {
-        "id": "235754020738695168",
-        "name": "Aurethious, the Emerald Knight",
-        "badgeName": "Emerald Badge"
+        "id": "112662192523853824",
+        "name": "Scoot, The Over Worked Nursery Worker",
+        "badgeName": "Itsy-Bitsy Badge"
         },
         {
-        "id": "193573529684410369",
-        "name": "Simple Kenny, the Berry Farmer",
-        "badgeName": "Berry Badge"
-        },
-        {
-        "id": "109799203152121856",
-        "name": "Mr Pizza, the PokéChef",
-        "badgeName": "Culinary Badge"
+        "id": "259658592573980673",
+        "name": "Rune the Dragon Collector",
+        "badgeName": "Dragon Dart Badge"
         },
         {
         "id": "180177605213814784",
-        "name": "Emmett, the Special",
-        "badgeName": "Piece of Resistance Badge"
+        "name": "Soundwave, Communications Expert",
+        "badgeName": "Data Disc Badge"
         },
         {
-        "id": "305375865838239744",
-        "name": "Yoshua, the Birdwatcher",
-        "badgeName": "Plume Badge"
+        "id": "",
+        "name": "Marshall",
+        "badgeName": ""
         },
         {
-        "id": "184101500170141697",
-        "name": "Tom Roe, Candela's Firewall",
-        "badgeName": "Valiant Badge"
+        "id": "",
+        "name": "MacDuff, the Furtive Heritor",
+        "badgeName": "Sable Badge"
         },
         {
-        "id": "234814727686062080",
-        "name": "Lyra, the Monster Rider",
-        "badgeName": "Kinship Badge"
+        "id": "",
+        "name": "Violetta, the Mad Mauve Matron",
+        "badgeName": "Medicine Badge"
         },
         {
-        "id": "273311518462836737",
-        "name": "Muckfoot, the Marsh Druid",
-        "badgeName": "Swamp Lantern Badge"
+        "id": "",
+        "name": "Captain Gyaraga, The Mysterious Space Pilot",
+        "badgeName": "Galactic Protector Badge"
         },
         {
-        "id": "192169923332538369",
-        "name": "Red, the Twitch User",
-        "badgeName": "Helix Badge"
+        "id": "356256546646130692",
+        "name": "Mr. Resetti, the Reset Surveillance Specialist",
+        "badgeName": "No Rese Badge"
+        },
+        {
+        "id": "",
+        "name": "Drak Sky, the Daring Dragoon",
+        "badgeName": "Royal Arms Badge"
+        },
+        {
+        "id": "",
+        "name": "Mariana, Explorer of the Depths",
+        "badgeName": "Abyssal Badge"
+        },
+        {
+        "id": "",
+        "name": "Team Snakemouth, The Guild's Finest",
+        "badgeName": "Explorer's Badge"
         }
     ],
     "veteranLeaders": [
         {
-        "id": "429744942345224192",
-        "name": "Rosy, the Rabbit Wrangler",
-        "badgeName": "Bunny Badge"
+        "id": "",
+        "name": "Erkenhelm, The Ultimate Dragon Slayer",
+        "badgeName": "Dragon Slayer Badge"
         },
         {
-        "id": "414424342395617281",
-        "name": "Yakumo, Narrator of Horrors",
-        "badgeName": "Occult Badge"
+        "id": "",
+        "name": "Glitch, Master of Birbs",
+        "badgeName": "Good Birb Badge"
+        },
+        {
+        "id": "",
+        "name": "Gus, The Bug Creep",
+        "badgeName": "Hive Badge"
+        },
+        {
+        "id": "",
+        "name": "Loopy, the Poke-Cosplayer",
+        "badgeName": "Crafting Badge"
+        },
+        {
+        "id": "126537033685532672",
+        "name": "TohruChu, The Poisonous",
+        "badgeName": "Toxic Badge"
+        },
+        {
+        "id": "",
+        "name": "Volcanus, the Frosty Flame",
+        "badgeName": "Freezeflame Badge"
         },
         {
         "id": "123251048797175808",
@@ -63,83 +93,63 @@
         "badgeName": "Master Magi Badge"
         },
         {
-        "id": "268233272138399754",
-        "name": "Sakurai, the Mechanical Tactician",
-        "badgeName": "Mechanical Badge"
+        "id": "",
+        "name": "Ian, Tavern Keeper",
+        "badgeName": "Name:Questing  Badge"
         },
         {
-        "id": "436625927519076352",
-        "name": "Brick Tamland, the Nutty Meterologist",
-        "badgeName": "Forecast Badge"
-        },
-        {
-        "id": "221279588997791744",
-        "name": "Virgil, The Haunted Guide",
-        "badgeName": "Possessed Badge"
-        },
-        {
-        "id": "315398097218043905",
-        "name": "Barnum, the Fossil Hunter",
-        "badgeName": "Fossil Badge"
-        },
-        {
-        "id": "126537033685532672",
-        "name": "TohruChu, Head of Dragon Maid Manor",
-        "badgeName": "Hospitality Badge"
-        },
-        {
-        "id": "356256546646130692",
-        "name": "Patrick Pinkerton, the Pink Pokémon Promoter",
-        "badgeName": "Pink Badge"
+        "id": "127202978586165248",
+        "name": "Perseverance, the Extraplanetary Geologist",
+        "badgeName": "Rover Badge"
         },
         {
         "id": "181442238864293889",
-        "name": "Captain Rusty, the Seafaring Wanderer",
-        "badgeName": "Galleon Badge"
+        "name": "Nathaniel, The Prodigal Archaeologist",
+        "badgeName": "Lost Badge"
+        },
+        {
+        "id": "305375865838239744",
+        "name": "Yoshi, the small Wing buffer",
+        "badgeName": "Wing Badge"
         }
     ],
     "elites": [
         {
-        "id": "229338714336264192",
-        "name": "Rhonder, the Winter Warrior",
-        "badgeName": "Absolute Zero Emblem"
-        },
-        {
-        "id": "127202978586165248",
-        "name": "Kellan, the Twisted Alchemist",
-        "badgeName": "Caustic Emblem"
-        },
-        {
-        "id": "259658592573980673",
-        "name": "Rune, Your Local Cryptozoologist",
-        "badgeName": "Duality Emblem"
-        },
-        {
         "id": "156540419180593153",
-        "name": "Aidan, The Draconic Master",
-        "badgeName": "Darting Dragon Dance Emblem"
+        "name": "Aidan, The Dragon Master",
+        "badgeName": "Salamence Type Emblem"
+        },
+        {
+        "id": "193573529684410369",
+        "name": "Simple Kenny, The Kirby Otaku",
+        "badgeName": "Kirby Otaku Emblem"
+        },
+        {
+        "id": "414424342395617281",
+        "name": "Haga-P, Producer of the Poke-Band",
+        "badgeName": "Groove Badge"
         },
         {
         "id": "340559329000423424",
-        "name": "Cryo, Twister of the Elements",
-        "badgeName": "Floe Emblem"
+        "name": "Lunella, The Lunar Stargazer",
+        "badgeName": "Nocturnal Emblem"
         },
         {
-        "id": "372623885201440768",
-        "name": "Akira, The Kaiju Enthusiast",
-        "badgeName": "Titan Emblem"
+        "id": "234814727686062080",
+        "name": "Doomybot, The PPL Doomemebot",
+        "badgeName": ":Memebot: Emblem"
+        },
+        {
+        "id": "436625927519076352",
+        "name": "The King of Winter, the Bringer of the Storm",
+        "badgeName": "Veteran of the Long Night Emblem"
         }
     ],
     "champions": [
         {
-        "id": "504917257491578880",
-        "name": "Eleanora, the Exquisite Entomologist",
-        "badgeName": "Collector Emblem"
-        },
-        {
-        "id": "112662192523853824",
-        "name": "Scoot, the Woolly Gentleman",
-        "badgeName": "Stache Emblem"
+        "id": "429744942345224192",
+        "name": "Hiyoko, the High-Flying Hunter-Gatherer!",
+        "badgeName": "Hatoful Emblem"
         }
     ]
 }

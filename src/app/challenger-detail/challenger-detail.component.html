@@ -10,18 +10,18 @@
                 <div *ngFor="let leader of challenger.casualLeaders" [ngClass]="{'unearned': challenger.badges.indexOf(leader.id) === -1}" class="casual leader-row">
                     <table>
                         <tr>
-                            <td class="panel">
+                            <td class="image-panel">
                                 <img class="portrait"
                                         alt="{{ leader.name }}"
                                         src="assets/images/portraits/{{ leader.id }}.png" />
                             </td>
-                            <td class="panel">
+                            <td class="image-panel">
                                 <img class="badge"
                                         alt="{{ leader.badgeName }}"
                                         src="assets/images/badges/{{ leader.id }}.png" />
                             </td>
-                            <td class="panel info-panel">
-                                <div class="info-panel">
+                            <td class="info-panel">
+                                <div class="panel">
                                     <tr>
                                         <span>{{ leader.name }}</span>
                                     </tr>
@@ -42,8 +42,8 @@
                                     </tr>
                                 </div>
                             </td>
-                            <td class="panel">
-                                <div class="bio-panel">
+                            <td class="info-panel bio-panel">
+                                <div class>
                                     <span>Lorem Ipsum yada yada yada</span>
                                 </div>
                             </td>
