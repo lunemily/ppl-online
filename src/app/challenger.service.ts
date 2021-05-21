@@ -6,6 +6,8 @@ import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
+import * as data from './leaders.json';
+
 
 @Injectable({
   providedIn: 'root'
@@ -39,68 +41,70 @@ export class ChallengerService {
         let challenger: Challenger = {
           id: id,
           name: response["name"],
-          badges: response["badges"].map(function(item) {
-            if (item["badgeWon"] === 1) {
-              return item['id'];
-            }
-          }),
-          queueOpen: response["badges"].map(function(item) {
-            if (item["queueOpen"] === 1) {
-              return item['id'];
-            }
-          }),
           /** 0=casual,1=veteran,2=elite,3=champion */
           casualLeaders: response["badges"].reduce(function(result, item) {
+            console.log(item);
             if (item["type"] === 0) {
+              let staticBadge: Badge = data.casualLeaders[data.casualLeaders.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
                 badgeName: item["badgeName"],
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
-                twitchName: item["twitchName"]
+                twitchName: item["twitchName"],
+                bio: staticBadge.bio,
               }
               result.push(badge);
             }
             return result;
           }, []),
           veteranLeaders: response["badges"].reduce(function(result, item) {
+            console.log(item);
             if (item["type"] === 1) {
+              let staticBadge: Badge = data.veteranLeaders[data.veteranLeaders.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
                 badgeName: item["badgeName"],
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
-                twitchName: item["twitchName"]
+                twitchName: item["twitchName"],
+                bio: staticBadge.bio,
               }
               result.push(badge);
             }
             return result;
           }, []),
           elites: response["badges"].reduce(function(result, item) {
+            console.log(item);
             if (item["type"] === 2) {
+              let staticBadge: Badge = data.elites[data.elites.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
                 badgeName: item["badgeName"],
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
-                twitchName: item["twitchName"]
+                twitchName: item["twitchName"],
+                bio: staticBadge.bio,
               }
               result.push(badge);
             }
             return result;
           }, []),
           champions: response["badges"].reduce(function(result, item) {
+            console.log(item);
             if (item["type"] === 3) {
+              let staticBadge: Badge = data.champions[data.champions.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
                 badgeName: item["badgeName"],
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
-                twitchName: item["twitchName"]
+                twitchName: item["twitchName"],
+                bio: staticBadge.bio,
               }
               result.push(badge);
             }
@@ -108,10 +112,10 @@ export class ChallengerService {
           }, []),
         };
         console.log(challenger);
-        // challenger.casualLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
-        // challenger.veteranLeaders.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
-        // challenger.elites.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
-        // challenger.champions.sort((a, b) => (challenger.queueOpen.indexOf(a.id) === -1) ? 1 : -1);
+        challenger.casualLeaders.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);
+        challenger.veteranLeaders.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);
+        challenger.elites.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);
+        challenger.champions.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);
 
         return challenger;
       }),
