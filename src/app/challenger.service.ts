@@ -43,7 +43,6 @@ export class ChallengerService {
           name: response["name"],
           /** 0=casual,1=veteran,2=elite,3=champion */
           casualLeaders: response["badges"].reduce(function(result, item) {
-            console.log(item);
             if (item["type"] === 0) {
               let staticBadge: Badge = data.casualLeaders[data.casualLeaders.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -53,6 +52,7 @@ export class ChallengerService {
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
+                doubles: item["doubles"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -60,7 +60,6 @@ export class ChallengerService {
             return result;
           }, []),
           veteranLeaders: response["badges"].reduce(function(result, item) {
-            console.log(item);
             if (item["type"] === 1) {
               let staticBadge: Badge = data.veteranLeaders[data.veteranLeaders.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -70,6 +69,7 @@ export class ChallengerService {
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
+                doubles: item["doubles"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -77,7 +77,6 @@ export class ChallengerService {
             return result;
           }, []),
           elites: response["badges"].reduce(function(result, item) {
-            console.log(item);
             if (item["type"] === 2) {
               let staticBadge: Badge = data.elites[data.elites.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -87,6 +86,7 @@ export class ChallengerService {
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
+                doubles: item["doubles"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -94,7 +94,6 @@ export class ChallengerService {
             return result;
           }, []),
           champions: response["badges"].reduce(function(result, item) {
-            console.log(item);
             if (item["type"] === 3) {
               let staticBadge: Badge = data.champions[data.champions.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -104,6 +103,7 @@ export class ChallengerService {
                 queueOpen: item["queueOpen"],
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
+                doubles: item["doubles"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -111,7 +111,7 @@ export class ChallengerService {
             return result;
           }, []),
         };
-        console.log(challenger);
+
         challenger.casualLeaders.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);
         challenger.veteranLeaders.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);
         challenger.elites.sort((a, b) => (a.queueOpen === 0) ? 1 : -1);

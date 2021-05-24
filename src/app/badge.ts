@@ -5,5 +5,6 @@ export interface Badge {
     queueOpen?: number;
     badgeWon?: number;
     twitchName?: string;
+    doubles?: number;
     bio?: string;
   }

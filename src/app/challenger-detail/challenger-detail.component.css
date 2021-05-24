@@ -93,10 +93,13 @@ h2 {
 }
 
 .bio-panel {
-  line-height: 1em;
+  line-height: 1.5em;
+  text-align: start;
+  padding: 1em;
+  font-weight: 600;
 }
 
-.queue {
+.callout {
   font-weight: 700;
   border-radius: 10px;
   border: 3px solid;
@@ -112,6 +115,12 @@ h2 {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
+}
+
+.doubles {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
 }
 
 .casual {

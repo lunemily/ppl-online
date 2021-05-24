@@ -30,15 +30,19 @@
                                     </tr>
                                     <tr>
                                         <span *ngIf="leader.queueOpen === 1"
-                                                class="queue queue-open"
+                                                class="callout queue-open"
                                                 matTooltip="This leader is currently taking challengers"
                                                 matTooltipPosition="above"
                                                 matTooltipClass="tooltip">OPEN</span>
                                         <span *ngIf="leader.queueOpen === 0"
-                                        class="queue queue-closed"
+                                        class="callout queue-closed"
                                         matTooltip="This leader is not currently taking challengers"
                                         matTooltipPosition="above"
                                         matTooltipClass="tooltip">CLOSED</span>
+                                    </tr>
+                                    <tr>
+                                        <span *ngIf="leader.doubles === 1"
+                                                class="callout doubles">DOUBLES</span>
                                     </tr>
                                 </div>
                             </td>
@@ -80,15 +84,19 @@
                                     </tr>
                                     <tr>
                                         <span *ngIf="leader.queueOpen === 1"
-                                                class="queue queue-open"
+                                                class="callout queue-open"
                                                 matTooltip="This leader is currently taking challengers"
                                                 matTooltipPosition="above"
                                                 matTooltipClass="tooltip">OPEN</span>
                                         <span *ngIf="leader.queueOpen === 0"
-                                        class="queue queue-closed"
+                                        class="callout queue-closed"
                                         matTooltip="This leader is not currently taking challengers"
                                         matTooltipPosition="above"
                                         matTooltipClass="tooltip">CLOSED</span>
+                                    </tr>
+                                    <tr>
+                                        <span *ngIf="leader.doubles === 1"
+                                                class="callout doubles">DOUBLES</span>
                                     </tr>
                                 </div>
                             </td>
@@ -131,15 +139,19 @@
                                     </tr>
                                     <tr>
                                         <span *ngIf="leader.queueOpen === 1"
-                                                class="queue queue-open"
+                                                class="callout queue-open"
                                                 matTooltip="This leader is currently taking challengers"
                                                 matTooltipPosition="above"
                                                 matTooltipClass="tooltip">OPEN</span>
                                         <span *ngIf="leader.queueOpen === 0"
-                                        class="queue queue-closed"
+                                        class="callout queue-closed"
                                         matTooltip="This leader is not currently taking challengers"
                                         matTooltipPosition="above"
                                         matTooltipClass="tooltip">CLOSED</span>
+                                    </tr>
+                                    <tr>
+                                        <span *ngIf="leader.doubles === 1"
+                                                class="callout doubles">DOUBLES</span>
                                     </tr>
                                 </div>
                             </td>
@@ -177,15 +189,19 @@
                                     </tr>
                                     <tr>
                                         <span *ngIf="leader.queueOpen === 1"
-                                                class="queue queue-open"
+                                                class="callout queue-open"
                                                 matTooltip="This leader is currently taking challengers"
                                                 matTooltipPosition="above"
                                                 matTooltipClass="tooltip">OPEN</span>
                                         <span *ngIf="leader.queueOpen === 0"
-                                        class="queue queue-closed"
+                                        class="callout queue-closed"
                                         matTooltip="This leader is not currently taking challengers"
                                         matTooltipPosition="above"
                                         matTooltipClass="tooltip">CLOSED</span>
+                                    </tr>
+                                    <tr>
+                                        <span *ngIf="leader.doubles === 1"
+                                                class="callout doubles">DOUBLES</span>
                                     </tr>
                                 </div>
                             </td>
