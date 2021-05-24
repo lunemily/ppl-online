@@ -2,7 +2,7 @@
 
 set -x
 
-ng build --prod --output-path docs --base-href /
+ng build --prod --output-path docs --base-href /online/
 
 cp docs/index.html docs/404.html
 
