@@ -6,5 +6,6 @@ export interface Badge {
     badgeWon?: number;
     twitchName?: string;
     doubles?: number;
+    type?: number;
     bio?: string;
   }

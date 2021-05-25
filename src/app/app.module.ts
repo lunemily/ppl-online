@@ -26,6 +26,7 @@ import { ChallengerSearchComponent } from './challenger-search/challenger-search
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
+import { LeaderRowComponent } from './leader-row/leader-row.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
     ChallengerSearchComponent,
     HeaderComponent,
     FooterComponent,
+    LeaderRowComponent,
   ],
   imports: [
     MatAutocompleteModule,
