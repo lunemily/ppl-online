@@ -123,6 +123,21 @@ h2 {
   border-color: #b8daff;
 }
 
+.twitch {
+  color: #463254;
+  background-color: #ddd3e5;
+  border-color: #e5d4e5;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.twitch-icon {
+  font-size: 1em;
+}
+
 .casual {
   background-color: #51b5a2;
 }

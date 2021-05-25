@@ -39,6 +39,6 @@ export class HeaderComponent implements OnInit {
   }
 
   openSchedule() {
-    window.open("https://docs.google.com/spreadsheets/d/1EM6t0mnE3UnUUhVGPmOM5x6yM60RaTgrxEU5h_hygnw/edit?usp=sharing");
+    window.open("https://docs.google.com/spreadsheets/d/1IAbFVbaM77S5KE8-p8wtJ2ts_k1fKVFb-lvTfvSsMbw/edit?usp=sharing");
   }
 }
