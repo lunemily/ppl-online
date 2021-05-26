@@ -53,6 +53,7 @@ export class ChallengerService {
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
+                type: item["type"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -70,6 +71,7 @@ export class ChallengerService {
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
+                type: item["type"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -87,6 +89,7 @@ export class ChallengerService {
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
+                type: item["type"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
@@ -104,6 +107,7 @@ export class ChallengerService {
                 badgeWon: item["badgeWon"],
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
+                type: item["type"],
                 bio: staticBadge.bio,
               }
               result.push(badge);
