@@ -37,16 +37,12 @@ export class ChallengerService {
     return this.http.get<Challenger>(url).pipe(
       map(response => {
 
-        /** Begin: Local debugging */
-        let local_response: Badge[] = data.badges;
-        /** End: Local debugging */
         /** Create object to return. Add in all leaders now. */
         let challenger: Challenger = {
           id: id,
           name: response["name"],
           /** 0=casual,1=veteran,2=elite,3=champion */
-          casualLeaders: local_response["badges"].reduce(function(result, item) {
-          // casualLeaders: response["badges"].reduce(function(result, item) {
+          casualLeaders: response["badges"].reduce(function(result, item) {
             if (item["type"] === 0) {
               let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -63,8 +59,7 @@ export class ChallengerService {
             }
             return result;
           }, []),
-          veteranLeaders: local_response["badges"].reduce(function(result, item) {
-          // veteranLeaders: response["badges"].reduce(function(result, item) {
+          veteranLeaders: response["badges"].reduce(function(result, item) {
             if (item["type"] === 1) {
               let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -81,8 +76,7 @@ export class ChallengerService {
             }
             return result;
           }, []),
-          elites: local_response["badges"].reduce(function(result, item) {
-          // elites: response["badges"].reduce(function(result, item) {
+          elites: response["badges"].reduce(function(result, item) {
             if (item["type"] === 2) {
               let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
@@ -99,8 +93,7 @@ export class ChallengerService {
             }
             return result;
           }, []),
-          champions: local_response["badges"].reduce(function(result, item) {
-          // champions: response["badges"].reduce(function(result, item) {
+          champions: response["badges"].reduce(function(result, item) {
             if (item["type"] === 3) {
               let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
