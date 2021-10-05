@@ -3,8 +3,8 @@
         <h2>{{challenger.name | uppercase }}'S TRAINER CARD</h2>
         <div class="casual-badges section">
             <div class="header">
-                <span class="codehack left">Casual Gym Leaders</span>
-                <span class="blox right">Beat any 8 gym leaders to go on to the elite 6</span>
+                <span class="codehack left">Gym Leaders</span>
+                <span class="blox right">Beat any 6 gym leaders to go on to the elite 6</span>
             </div>
             <div class=leaders-container>
                 <div *ngFor="let leader of challenger.casualLeaders" [ngClass]="{'unearned': leader.badgeWon === 0}" class="casual leader-row">
@@ -25,8 +25,8 @@
         </div> -->
         <div class="elites section">
             <div class="header">
-                <span class="codehack left">Elite 6</span>
-                <span class="blox right">Beat any 4 elites to go on to the champion</span>
+                <span class="codehack left">Elite 4</span>
+                <span class="blox right">Beat any 3 elites to go on to the champion</span>
             </div>
             <div class=leaders-container>
                 <div *ngFor="let leader of challenger.elites" [ngClass]="{'unearned': leader.badgeWon === 0}" class="elite leader-row">
@@ -36,7 +36,7 @@
         </div>
         <div class="champions section">
             <div class="header">
-                <span class="codehack left">Champions</span>
+                <span class="codehack left">Champion</span>
                 <span class="blox right">Defeat the champion to enter the ppl online hall of fame</span>
             </div>
             <div class=leaders-container>
@@ -47,7 +47,7 @@
         </div>
     </mat-card>
     <br>
-    <a id="challengers" mat-raised-button color="primary" href="/online">Back to Challengers</a>
+    <a id="challengers" mat-raised-button href="/aus">Back to Challengers</a>
 </div>
 <br>
 <app-challengers *ngIf="!challenger"></app-challengers>

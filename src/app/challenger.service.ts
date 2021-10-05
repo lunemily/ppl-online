@@ -14,7 +14,7 @@ import * as data from './leaders.json';
 })
 export class ChallengerService {
 
-  private challengersUrl = 'http://toastserv.com:26437';  // URL to web api
+  private challengersUrl = 'https://toastserv.com:26437';  // URL to web api
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };

@@ -331,6 +331,10 @@ a, a:hover, a:visited {
 
 #challengers {
   margin-bottom: 2em;
+  
+  /* Aus */
+  background-color: #40322b;
+  color: #dddddd;
 }
 
 @media (min-width: 600px) {
