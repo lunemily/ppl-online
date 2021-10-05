@@ -44,7 +44,6 @@ export class ChallengerService {
           /** 0=casual,1=veteran,2=elite,3=champion */
           casualLeaders: response["badges"].reduce(function(result, item) {
             if (item["type"] === 0) {
-              let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
@@ -54,7 +53,7 @@ export class ChallengerService {
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
                 type: item["type"],
-                bio: staticBadge.bio,
+                bio: data.badges[item["id"]].bio,
               }
               result.push(badge);
             }
@@ -62,7 +61,6 @@ export class ChallengerService {
           }, []),
           veteranLeaders: response["badges"].reduce(function(result, item) {
             if (item["type"] === 1) {
-              let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
@@ -72,7 +70,7 @@ export class ChallengerService {
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
                 type: item["type"],
-                bio: staticBadge.bio,
+                bio: data.badges[item["id"]].bio,
               }
               result.push(badge);
             }
@@ -80,7 +78,6 @@ export class ChallengerService {
           }, []),
           elites: response["badges"].reduce(function(result, item) {
             if (item["type"] === 2) {
-              let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
@@ -90,7 +87,7 @@ export class ChallengerService {
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
                 type: item["type"],
-                bio: staticBadge.bio,
+                bio: data.badges[item["id"]].bio,
               }
               result.push(badge);
             }
@@ -98,7 +95,6 @@ export class ChallengerService {
           }, []),
           champions: response["badges"].reduce(function(result, item) {
             if (item["type"] === 3) {
-              let staticBadge: Badge = data.badges[data.badges.map(function(e) { return e.id; }).indexOf(item["id"])];
               let badge: Badge = {
                 id: item["id"],
                 name: item["name"],
@@ -108,7 +104,7 @@ export class ChallengerService {
                 twitchName: item["twitchName"],
                 doubles: item["doubles"],
                 type: item["type"],
-                bio: staticBadge.bio,
+                bio: data.badges[item["id"]].bio,
               }
               result.push(badge);
             }

@@ -139,11 +139,17 @@ a, a:hover, a:visited {
 }
 
 .casual {
-  background-color: #51b5a2;
+  /* Online */
+  /* background-color: #51b5a2; */
+  /* Aus */
+  background-color: #f8de54;
 }
 
 .casual-badges {
-  background-color: #ef92ff;
+  /* Online */
+  /* background-color: #ef92ff; */
+  /* Aus */
+  background-color: #fac983;
 }
 
 .casual-badges * span.codehack {
@@ -212,11 +218,17 @@ a, a:hover, a:visited {
 }
 
 .elite {
-  background-color: #238355;
+  /* Online */
+  /* background-color: #238355; */
+  /* Aus */
+  background-color: #74AE47;
 }
 
 .elites {
-  background-color: #71ff77;
+  /* Online */
+  /* background-color: #71ff77; */
+  /* Aus */
+  background-color: #cb755f;
 }
 
 .elites * span.codehack {
@@ -257,12 +269,18 @@ a, a:hover, a:visited {
                -2px 2px #af0996;
 }
 
-.champions {
-  background-color: #33eb47;
+.champion {
+  /* Online */
+  /* background-color: #003f50; */
+  /* Aus */
+  background-color: #945668;
 }
 
-.champion {
-  background-color: #003f50;
+.champions {
+  /* Online */
+  /* background-color: #33eb47; */
+  /* Aus */
+  background-color: #b07fb7;
 }
 
 .champions * span.codehack {

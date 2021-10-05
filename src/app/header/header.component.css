@@ -2,6 +2,12 @@ mat-toolbar {
     position: fixed;
     margin-top: 0px;
 }
+
+mat-toolbar.aus {
+    background-color: #40322b;
+    color: #dddddd;
+}
+
 nav a {
     padding: 5px 10px;
     text-decoration: none;
