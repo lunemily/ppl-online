@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatButtonModule, } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,25 +19,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { ChallengersComponent } from './challengers/challengers.component';
-import { ChallengerDetailComponent } from './challenger-detail/challenger-detail.component';
+import { HomeComponent } from './home/home.component';
+import { TrainerCardComponent } from './trainer-card/trainer-card.component';
 import { MessagesComponent } from './messages/messages.component';
-import { ChallengerSearchComponent } from './challenger-search/challenger-search.component';
+import { SearchComponent } from './search/search.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
-import { LeaderRowComponent } from './leader-row/leader-row.component';
+import { LeaderItemComponent } from './trainer-card/leader-item/leader-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChallengersComponent,
-    ChallengerDetailComponent,
+    HomeComponent,
+    TrainerCardComponent,
     MessagesComponent,
-    ChallengerSearchComponent,
+    SearchComponent,
     HeaderComponent,
     FooterComponent,
-    LeaderRowComponent,
+    LeaderItemComponent,
   ],
   imports: [
     MatAutocompleteModule,
@@ -56,9 +56,9 @@ import { LeaderRowComponent } from './leader-row/leader-row.component';
     FormsModule,
     ClipboardModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

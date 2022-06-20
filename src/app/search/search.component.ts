@@ -2,20 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable, Subject } from 'rxjs';
 
-import {
-   debounceTime, distinctUntilChanged, switchMap
- } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 import { Challenger } from '../model/challenger';
 import { ChallengerService } from '../service/challenger.service';
 
 @Component({
-  selector: 'app-challenger-search',
-  templateUrl: './challenger-search.component.html',
-  styleUrls: [ './challenger-search.component.css' ]
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css'],
 })
-export class ChallengerSearchComponent implements OnInit {
-  searchValue = "";
+export class SearchComponent implements OnInit {
+  searchValue = '';
   challengers$: Observable<Challenger[]>;
   private searchTerms = new Subject<string>();
 
@@ -35,7 +33,9 @@ export class ChallengerSearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.challengerService.searchChallengers(term)),
+      switchMap((term: string) =>
+        this.challengerService.searchChallengers(term)
+      )
     );
   }
 }

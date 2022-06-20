@@ -49,7 +49,7 @@ h2 {
   line-height: 0;
 }
 
-.leader-row {
+.leader-item {
   border: 2px solid #ffffff;
   display: inline-block;
   text-align: center; /* ensures the image is always in the h-middle */
@@ -321,7 +321,7 @@ a, a:hover, a:visited {
                -2px 2px #33eb46;
 }
 
-.unearned.leader-row {
+.unearned.leader-item {
   background-color: #555555;
 }
 

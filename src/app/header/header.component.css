@@ -8,6 +8,11 @@ mat-toolbar.aus {
     color: #dddddd;
 }
 
+mat-toolbar.online {
+    background-color: #3f51b5;
+    color: #dddddd;
+}
+
 nav a {
     padding: 5px 10px;
     text-decoration: none;

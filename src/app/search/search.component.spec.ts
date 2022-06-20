@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeaderRowComponent } from './leader-row.component';
+import { SearchComponent } from './search.component';
 
-describe('LeaderRowComponent', () => {
-  let component: LeaderRowComponent;
-  let fixture: ComponentFixture<LeaderRowComponent>;
+describe('SearchComponent', () => {
+  let component: SearchComponent;
+  let fixture: ComponentFixture<SearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeaderRowComponent ]
-    })
-    .compileComponents();
+      declarations: [SearchComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LeaderRowComponent);
+    fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

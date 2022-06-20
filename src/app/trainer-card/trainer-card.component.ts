@@ -10,15 +10,14 @@ import { HeaderService } from '../service/header.service';
 import * as data from '../leaders.json';
 
 @Component({
-  selector: 'app-challenger-detail',
-  templateUrl: './challenger-detail.component.html',
-  styleUrls: ['./challenger-detail.component.css'],
+  selector: 'app-trainer-card',
+  templateUrl: './trainer-card.component.html',
+  styleUrls: ['./trainer-card.component.css'],
   // Need to remove view encapsulation so that the custom tooltip style defined in
   // `tooltip-custom-class-example.css` will not be scoped to this component's view.
   encapsulation: ViewEncapsulation.None,
 })
-export class ChallengerDetailComponent implements OnInit {
-
+export class TrainerCardComponent implements OnInit {
   @Input() challenger: Challenger;
   eliteCount: number;
   eliteBeat: number;
@@ -28,14 +27,14 @@ export class ChallengerDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private challengerService: ChallengerService,
     private headerService: HeaderService,
-    private location: Location,
-  ) { }
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     this.eliteCount = 5;
     this.eliteBeat = 4;
     this.gymBeat = 8;
-    if(!!this.route.snapshot.queryParams.id) {
+    if (!!this.route.snapshot.queryParams.id) {
       this.getChallenger();
     }
     this.headerService.setUrl(window.location.href);
@@ -43,8 +42,9 @@ export class ChallengerDetailComponent implements OnInit {
 
   getChallenger(): void {
     const id = this.route.snapshot.queryParams.id;
-    this.challengerService.getChallenger(id)
-      .subscribe(challenger => this.challenger = challenger);
+    this.challengerService
+      .getChallenger(id)
+      .subscribe((challenger) => (this.challenger = challenger));
 
     // /** Begin: Local debugging */
     // let local_response = {
@@ -143,5 +143,4 @@ export class ChallengerDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
 }

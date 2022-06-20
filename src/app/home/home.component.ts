@@ -6,29 +6,29 @@ import { ChallengerService } from '../service/challenger.service';
 import { HeaderService } from '../service/header.service';
 
 @Component({
-  selector: 'app-challengers',
-  templateUrl: './challengers.component.html',
-  styleUrls: ['./challengers.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class ChallengersComponent implements OnInit {
-
+export class HomeComponent implements OnInit {
   challengers: Challenger[];
 
   constructor(
     private route: ActivatedRoute,
     private challengerService: ChallengerService,
     private headerService: HeaderService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    if(!(!!this.route.snapshot.queryParams.id)) {
+    if (!!!this.route.snapshot.queryParams.id) {
       this.getChallengers();
     }
     this.headerService.setUrl(window.location.href);
   }
 
   getChallengers(): void {
-    this.challengerService.getChallengers()
-      .subscribe( challengers => this.challengers = challengers);
+    this.challengerService
+      .getChallengers()
+      .subscribe((challengers) => (this.challengers = challengers));
   }
 }

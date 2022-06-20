@@ -7,30 +7,29 @@
                 <span class="blox right">Beat any {{ gymBeat }} gym leaders to go on to the Elite {{ eliteCount }}</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of challenger.casualLeaders" [ngClass]="{'unearned': leader.badgeWon === 0}" class="casual leader-row">
-                    <app-leader-row [leader]="leader"></app-leader-row>
+                <div *ngFor="let leader of challenger.casualLeaders" [ngClass]="{'unearned': leader.badgeWon === 0}" class="casual leader-item">
+                    <app-leader-item [leader]="leader"></app-leader-item>
                 </div>
             </div>
         </div>
-        <!-- No veterans for PPL Online AUS -->
-        <!-- <div class="veteran-badges section">
+        <div class="veteran-badges section">
             <div class="header">
                 <span class="codehack left">Veteran Gym Leaders</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of challenger.veteranLeaders" [ngClass]="{'unearned': leader.badgeWon === 0}" class="veteran leader-row">
-                    <app-leader-row [leader]="leader"></app-leader-row>
+                <div *ngFor="let leader of challenger.veteranLeaders" [ngClass]="{'unearned': leader.badgeWon === 0}" class="veteran leader-item">
+                    <app-leader-item [leader]="leader"></app-leader-item>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div class="elites section">
             <div class="header">
                 <span class="codehack left">Elite {{ eliteCount }}</span>
                 <span class="blox right">Beat any {{ eliteBeat }} elites to go on to the champion</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of challenger.elites" [ngClass]="{'unearned': leader.badgeWon === 0}" class="elite leader-row">
-                    <app-leader-row [leader]="leader"></app-leader-row>
+                <div *ngFor="let leader of challenger.elites" [ngClass]="{'unearned': leader.badgeWon === 0}" class="elite leader-item">
+                    <app-leader-item [leader]="leader"></app-leader-item>
                 </div>
             </div>
         </div>
@@ -40,15 +39,15 @@
                 <span class="blox right">Defeat the champion to enter the ppl online hall of fame</span>
             </div>
             <div class=leaders-container>
-                <div *ngFor="let leader of challenger.champions" [ngClass]="{'unearned': leader.badgeWon === 0}" class="champion leader-row">
-                    <app-leader-row [leader]="leader"></app-leader-row>
+                <div *ngFor="let leader of challenger.champions" [ngClass]="{'unearned': leader.badgeWon === 0}" class="champion leader-item">
+                    <app-leader-item [leader]="leader"></app-leader-item>
                 </div>
             </div>
         </div>
     </mat-card>
     <br>
-    <a id="challengers" mat-raised-button href="/aus">Back to Challengers</a>
+    <a id="challengers" mat-raised-button href="/online">Back to Challengers</a>
 </div>
 <br>
-<app-challengers *ngIf="!challenger"></app-challengers>
+<app-home *ngIf="!challenger"></app-home>
 

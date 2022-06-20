@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChallengerDetailComponent } from './challenger-detail/challenger-detail.component';
+import { TrainerCardComponent } from './trainer-card/trainer-card.component';
 
 const routes: Routes = [
-  { path: '', component: ChallengerDetailComponent,
-  runGuardsAndResolvers: 'always' },
+  {
+    path: '',
+    component: TrainerCardComponent,
+    runGuardsAndResolvers: 'always',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    onSameUrlNavigation: 'reload'
-  })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      onSameUrlNavigation: 'reload',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
