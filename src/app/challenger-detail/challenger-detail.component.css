@@ -140,16 +140,16 @@ a, a:hover, a:visited {
 
 .casual {
   /* Online */
-  /* background-color: #51b5a2; */
+  background-color: #51b5a2;
   /* Aus */
-  background-color: #f8de54;
+  /* background-color: #f8de54; */
 }
 
 .casual-badges {
   /* Online */
-  /* background-color: #ef92ff; */
+  background-color: #ef92ff;
   /* Aus */
-  background-color: #fac983;
+  /* background-color: #fac983; */
 }
 
 .casual-badges * span.codehack {
@@ -219,16 +219,16 @@ a, a:hover, a:visited {
 
 .elite {
   /* Online */
-  /* background-color: #238355; */
+  background-color: #238355;
   /* Aus */
-  background-color: #74AE47;
+  /* background-color: #74AE47; */
 }
 
 .elites {
   /* Online */
-  /* background-color: #71ff77; */
+  background-color: #71ff77;
   /* Aus */
-  background-color: #cb755f;
+  /* background-color: #cb755f; */
 }
 
 .elites * span.codehack {
@@ -271,16 +271,16 @@ a, a:hover, a:visited {
 
 .champion {
   /* Online */
-  /* background-color: #003f50; */
+  background-color: #003f50;
   /* Aus */
-  background-color: #945668;
+  /* background-color: #945668; */
 }
 
 .champions {
   /* Online */
-  /* background-color: #33eb47; */
+  background-color: #33eb47;
   /* Aus */
-  background-color: #b07fb7;
+  /* background-color: #b07fb7; */
 }
 
 .champions * span.codehack {
@@ -333,7 +333,7 @@ a, a:hover, a:visited {
   margin-bottom: 2em;
   
   /* Aus */
-  background-color: #40322b;
+  /* background-color: #40322b; */
   color: #dddddd;
 }
 

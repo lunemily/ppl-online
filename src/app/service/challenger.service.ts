@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Challenger } from './challenger';
-import { Badge } from './badge';
+import { Challenger } from '../model/challenger';
+import { Badge } from '../model/badge';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import * as data from './leaders.json';
+import * as data from '../leaders.json';
 
 
 @Injectable({

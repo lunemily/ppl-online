@@ -6,8 +6,8 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Challenger } from '../challenger';
-import { ChallengerService } from '../challenger.service';
+import { Challenger } from '../model/challenger';
+import { ChallengerService } from '../service/challenger.service';
 
 @Component({
   selector: 'app-challenger-search',

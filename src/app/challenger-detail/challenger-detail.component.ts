@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { Challenger } from '../challenger';
-import { Badge } from '../badge';
+import { Challenger } from '../model/challenger';
+import { Badge } from '../model/badge';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { ChallengerService } from '../challenger.service';
-import { HeaderService } from '../header.service';
+import { ChallengerService } from '../service/challenger.service';
+import { HeaderService } from '../service/header.service';
 
 import * as data from '../leaders.json';
 
@@ -20,6 +20,9 @@ import * as data from '../leaders.json';
 export class ChallengerDetailComponent implements OnInit {
 
   @Input() challenger: Challenger;
+  eliteCount: number;
+  eliteBeat: number;
+  gymBeat: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +32,9 @@ export class ChallengerDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.eliteCount = 5;
+    this.eliteBeat = 4;
+    this.gymBeat = 8;
     if(!!this.route.snapshot.queryParams.id) {
       this.getChallenger();
     }

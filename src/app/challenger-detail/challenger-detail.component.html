@@ -1,10 +1,10 @@
 <div *ngIf="challenger">
     <mat-card class="trainer-card">
-        <h2>{{challenger.name | uppercase }}'S TRAINER CARD</h2>
+        <h2>{{ challenger.name | uppercase }}'S TRAINER CARD</h2>
         <div class="casual-badges section">
             <div class="header">
                 <span class="codehack left">Gym Leaders</span>
-                <span class="blox right">Beat any 6 gym leaders to go on to the elite 6</span>
+                <span class="blox right">Beat any {{ gymBeat }} gym leaders to go on to the Elite {{ eliteCount }}</span>
             </div>
             <div class=leaders-container>
                 <div *ngFor="let leader of challenger.casualLeaders" [ngClass]="{'unearned': leader.badgeWon === 0}" class="casual leader-row">
@@ -25,8 +25,8 @@
         </div> -->
         <div class="elites section">
             <div class="header">
-                <span class="codehack left">Elite 4</span>
-                <span class="blox right">Beat any 3 elites to go on to the champion</span>
+                <span class="codehack left">Elite {{ eliteCount }}</span>
+                <span class="blox right">Beat any {{ eliteBeat }} elites to go on to the champion</span>
             </div>
             <div class=leaders-container>
                 <div *ngFor="let leader of challenger.elites" [ngClass]="{'unearned': leader.badgeWon === 0}" class="elite leader-row">

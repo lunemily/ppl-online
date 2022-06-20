@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Challenger } from '../challenger';
-import { ChallengerService } from '../challenger.service';
-import { HeaderService } from '../header.service';
+import { Challenger } from '../model/challenger';
+import { ChallengerService } from '../service/challenger.service';
+import { HeaderService } from '../service/header.service';
 
 @Component({
   selector: 'app-challengers',

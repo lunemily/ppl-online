@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Badge } from '../badge';
+import { Badge } from '../model/badge';
 
 @Component({
   selector: 'app-leader-row',
