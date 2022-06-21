@@ -6,9 +6,9 @@
                     src="assets/images/portraits/{{ leader.id }}.png" />
         </td>
         <!-- For when the champion doesn't have a badge -->
-        <!-- <td class="image-panel" *ngIf="leader.type !== 3"> -->
+        <td class="image-panel" *ngIf="leader.type !== 3">
         <!-- For when the champion has a badge -->
-        <td class="image-panel">
+        <!-- <td class="image-panel"> -->
             <img class="badge"
                     alt="{{ leader.badgeName }}"
                     src="assets/images/badges/{{ leader.id }}.png" />
